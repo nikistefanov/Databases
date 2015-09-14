@@ -61,7 +61,7 @@
 # The Trainers Team
 
 <!-- section start -->
-<!-- attr: {style="font-size:40px"} -->
+<!-- attr: {style: "font-size:40px"} -->
 # Lead Trainer
 <img src="css/imgs/nikolay-kostov.png" style="float:right" height="200" />
 *   **Nikolay Kostov**
@@ -78,7 +78,7 @@
 	<a href="https://github.com/NikolayIT" title="https://github.com/NikolayIT" target="_blank">https://github.com/NikolayIT</a>
 
 <!-- section start -->
-<!-- attr: {style="font-size:40px"} -->
+<!-- attr: {style: "font-size:40px"} -->
 #Deputy Trainer
 <img src="css/imgs/ivaylo-kenov.png" style="float:right" height="240" />
 *   **Ivaylo Kenov**
@@ -94,7 +94,7 @@
 	<a href="https://github.com/ivaylokenov" title="https://github.com/ivaylokenov" target="_black">https://github.com/ivaylokenov</a>
 
 <!-- section start -->
-<!-- attr: {style="font-size:40px"} -->
+<!-- attr: {style: "font-size:40px"} -->
 #The Trainers Team
 <img src="css/imgs/doncho-minkov.jpg" style="float:right" height="230" />
 *   **Doncho Minkov**
@@ -120,7 +120,7 @@
 	*   E-mail: evlogi.hristov [at] telerik.com
 	
 <!-- section start -->
-<!-- attr: {style="font-size:40px"} -->
+<!-- attr: {style: "font-size:40px"} -->
 #The Trainers Team
 <img src="css/imgs/kristian-tsuklev.jpg" style="float:right" height="240" />
 *   **Kristiyan Tsaklev**
