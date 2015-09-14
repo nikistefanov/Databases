@@ -21,16 +21,15 @@
 *	Resources for the Course
 
 <!-- section start -->
-<!-- attr: {id: 'databases-for-developers', class: 'slide-title'} -->
+<!-- attr: {class: 'slide-section', id: 'coming-next'} -->
 # Databases for Developers
 ## Coming To The Next Module
 
 <!-- section start -->
-<!-- attr: {id: 'databases-program', class: 'slide-title'} -->
+<!-- attr: {class: 'slide-section', id: 'databases-program'} -->
 # Databases – Program
 ## What Will We Cover in the Databases Course?
 
-<!-- section start -->
 # The Databases Course Program
 
 1.	Database Systems – Overview
@@ -43,7 +42,6 @@
 8.	ADO.NET Entity Framework
 9.	Entity Framework Performance
 
-<!-- section start -->
 # The Databases Course Program
 
 10. Code First in Entity Framework
@@ -57,13 +55,13 @@
 18. Exam
 
 <!-- section start -->
-<!-- attr: {id: 'trainers', class: 'slide-title'} -->
+<!-- attr: {class: 'slide-section', id: 'trainers'} -->
 # The Trainers Team
 
-<!-- section start -->
 <!-- attr: {style: "font-size:40px"} -->
 # Lead Trainer
-<img src="css/imgs/nikolay-kostov.png" style="float:right" height="200" />
+
+<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/nikolay-kostov.png" style="float:right" height="200" />
 *   **Nikolay Kostov**
 	*   Manager Software Engineering
 	<br />@ Telerik (Progress)
@@ -77,10 +75,9 @@
 	*   GitHub:
 	<a href="https://github.com/NikolayIT" title="https://github.com/NikolayIT" target="_blank">https://github.com/NikolayIT</a>
 
-<!-- section start -->
 <!-- attr: {style: "font-size:40px"} -->
-#Deputy Trainer
-<img src="css/imgs/ivaylo-kenov.png" style="float:right" height="240" />
+# Deputy Trainer
+<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/ivaylo-kenov.png" style="float:right" height="240" />
 *   **Ivaylo Kenov**
 	*   Technical Trainer @ Telerik Academy
 	*   Mathematical competitions
@@ -93,10 +90,9 @@
 	*   GitHub:
 	<a href="https://github.com/ivaylokenov" title="https://github.com/ivaylokenov" target="_black">https://github.com/ivaylokenov</a>
 
-<!-- section start -->
 <!-- attr: {style: "font-size:40px"} -->
-#The Trainers Team
-<img src="css/imgs/doncho-minkov.jpg" style="float:right" height="230" />
+# The Trainers Team
+<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/doncho-minkov.jpg" style="float:right" height="230" />
 *   **Doncho Minkov**
 	*   Senior Technical Trainer @ Telerik Academy
 	*   Contestant in the Informatics competitions
@@ -109,9 +105,8 @@
 	*   GitHub:
 	<a href="https://github.com/Minkov" title="https://github.com/Minkov" target="_blank">https://github.com/Minkov</a>
 
-<!-- section start -->
-#The Trainers Team
-<img src="css/imgs/evlogi-hristov.jpg" style="float:right" height="240" />
+# The Trainers Team
+<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/evlogi-hristov.jpg" style="float:right" height="240" />
 *   **Evlogi Hristov**
 	*   Technical Trainer @ Telerik Academy
 	*   Graduate from the fourth season
@@ -119,10 +114,9 @@
 	*   Ex-developer, Sharepoint
 	*   E-mail: evlogi.hristov [at] telerik.com
 	
-<!-- section start -->
 <!-- attr: {style: "font-size:40px"} -->
-#The Trainers Team
-<img src="css/imgs/kristian-tsuklev.jpg" style="float:right" height="240" />
+# The Trainers Team
+<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/kristian-tsuklev.jpg" style="float:right" height="240" />
 *   **Kristiyan Tsaklev**
 	*   Technical Trainer @ Telerik Academy
 	*   Champion in national and international
@@ -137,7 +131,6 @@
 # Course Evaluation
 ## Thank God there are.. NO Bonuses
 
-<!-- section start -->
 # Course Evaluation
 
 *   **Practical exam** - 55%
@@ -148,7 +141,6 @@
 *   **Forum activity** - 5%
 *   **Helping other students** - 5%
 
-<!-- section start -->
 # Pass / Excellence / Fail Criteria
 
 *	Criteria for pass / pass with excellence / fail
@@ -160,7 +152,6 @@
 	*	Fail
 		*	Low total results or low exam results
 
-<!-- section start -->
 # Homework Peer Reviews
 
 *	Everyone will `get feedback` for their homework
@@ -172,7 +163,6 @@
 		*	From the same topic, after the deadline
 		*	Homework comments are `not obligatory`
 		
-<!-- section start -->
 # Check Your Presence
 *	From now on you should check your presence on the barcode reader `2-3 times a day`:
 	*	In the morning when lectures begin (~10:30)
@@ -184,7 +174,6 @@
 # Resources
 ## What We Need in Addition to this Course Content?
 
-<!-- section start -->
 # Course Web Site & Forums
 
 *	Register for the [Telerik Academy Forums](http://forums.academy.telerik.com/web-development/databases)
@@ -193,19 +182,16 @@
 	*	Share source code / discuss ideas
 *	The databases official [web site](http://academy.telerik.com/student-courses/software-technologies/databases/about)
 
-<!-- section start -->
-# Telerik Integrated
-# Learning System (TILS)
+# Telerik Integrated Learning System (TILS)
 
-*	The Telerik Integrated Learning System ([TILS](www.telerikacademy.com))
+*	The Telerik Integrated Learning System ([TILS](http://www.telerikacademy.com))
 	*	Important resource for all students
 	*	Homework submissions
 	*	Homework peer reviews
 	*	Presence cards with barcode
 	*	Reports about your results
-*	[Course site](telerikacademy.com/Courses/Courses/Details/257)
+*	[Course site](http://telerikacademy.com/Courses/Courses/Details/257)
 
-<!-- section start -->
 # Required Software
 
 *	Software needed for this course:
