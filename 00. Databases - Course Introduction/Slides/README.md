@@ -25,6 +25,9 @@
 # Databases for Developers
 ## Coming To The Next Module
 
+# TODO:
+
+
 <!-- section start -->
 <!-- attr: {class: 'slide-section', id: 'databases-program'} -->
 # Databases – Program
@@ -127,7 +130,7 @@
 	<a href="https://github.com/cuklev" title="https://github.com/cuklev" target="_blank">https://github.com/cuklev</a>
 
 <!-- section start -->
-<!-- attr: {id: 'evaluation', class: 'slide-title'} -->
+<!-- attr: {id: 'evaluation', class: 'slide-section'} -->
 # Course Evaluation
 ## Thank God there are.. NO Bonuses
 
@@ -170,7 +173,7 @@
 	*	When you have data structures and algorithms when the lecture starts (~18:00)
 
 <!-- section start -->
-<!-- attr: {id: 'resources', class: 'slide-title'} -->
+<!-- attr: {id: 'resources', class: 'slide-section'} -->
 # Resources
 ## What We Need in Addition to this Course Content?
 
@@ -202,6 +205,6 @@
 		*	MySQL Workbench
 
 <!-- section start -->
-<!-- attr: {id: 'questions', class: 'slide-title'} -->
+<!-- attr: {id: 'questions', class: 'slide-section'} -->
 # Questions
 ## Databses - Course introduction
