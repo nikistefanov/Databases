@@ -64,8 +64,7 @@
 <!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # Lead Trainer
 
-<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/nikolay-kostov.png" style="float:right" height="200" />
-
+<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/revealjs-theme/css/imgs/nikolay-kostov.png" style="float:right" height="200" />
 *   **Nikolay Kostov**
 	*   Manager Software Engineering
 	<br />@ Telerik (Progress)
@@ -82,7 +81,7 @@
 <!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # Deputy Trainer
 
-<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/ivaylo-kenov.png" style="float:right" height="240" />
+<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/revealjs-theme/css/imgs/ivaylo-kenov.png" style="float:right" height="240" />
 *   **Ivaylo Kenov**
 	*   Technical Trainer @ Telerik Academy
 	*   Mathematical competitions
@@ -97,7 +96,7 @@
 
 <!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # The Trainers Team
-<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/doncho-minkov.jpg" style="float:right" height="230" />
+<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/revealjs-theme/css/imgs/doncho-minkov.jpg" style="float:right" height="230" />
 *   **Doncho Minkov**
 	*   Senior Technical Trainer @ Telerik Academy
 	*   Contestant in the Informatics competitions
@@ -112,7 +111,7 @@
 
 <!-- attr: {hasScriptWrapper: true} -->
 # The Trainers Team
-<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/evlogi-hristov.jpg" style="float:right" height="240" />
+<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/revealjs-theme/css/imgs/evlogi-hristov.jpg" style="float:right" height="240" />
 *   **Evlogi Hristov**
 	*   Technical Trainer @ Telerik Academy
 	*   Graduate from the fourth season
@@ -122,7 +121,7 @@
 	
 <!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # The Trainers Team
-<img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/kristian-tsuklev.jpg" style="float:right" height="240" />
+<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/revealjs-theme/css/imgs/kristian-tsuklev.jpg" style="float:right" height="240" />
 *   **Kristiyan Tsaklev**
 	*   Technical Trainer @ Telerik Academy
 	*   Champion in national and international
