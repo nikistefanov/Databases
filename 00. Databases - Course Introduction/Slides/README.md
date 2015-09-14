@@ -61,10 +61,11 @@
 <!-- attr: {class: 'slide-section', id: 'trainers'} -->
 # The Trainers Team
 
-<!-- attr: {style: "font-size:40px"} -->
+<!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # Lead Trainer
 
 <img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/nikolay-kostov.png" style="float:right" height="200" />
+
 *   **Nikolay Kostov**
 	*   Manager Software Engineering
 	<br />@ Telerik (Progress)
@@ -78,8 +79,9 @@
 	*   GitHub:
 	<a href="https://github.com/NikolayIT" title="https://github.com/NikolayIT" target="_blank">https://github.com/NikolayIT</a>
 
-<!-- attr: {style: "font-size:40px"} -->
+<!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # Deputy Trainer
+
 <img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/ivaylo-kenov.png" style="float:right" height="240" />
 *   **Ivaylo Kenov**
 	*   Technical Trainer @ Telerik Academy
@@ -93,7 +95,7 @@
 	*   GitHub:
 	<a href="https://github.com/ivaylokenov" title="https://github.com/ivaylokenov" target="_black">https://github.com/ivaylokenov</a>
 
-<!-- attr: {style: "font-size:40px"} -->
+<!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # The Trainers Team
 <img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/doncho-minkov.jpg" style="float:right" height="230" />
 *   **Doncho Minkov**
@@ -108,6 +110,7 @@
 	*   GitHub:
 	<a href="https://github.com/Minkov" title="https://github.com/Minkov" target="_blank">https://github.com/Minkov</a>
 
+<!-- attr: {hasScriptWrapper: true} -->
 # The Trainers Team
 <img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/evlogi-hristov.jpg" style="float:right" height="240" />
 *   **Evlogi Hristov**
@@ -117,7 +120,7 @@
 	*   Ex-developer, Sharepoint
 	*   E-mail: evlogi.hristov [at] telerik.com
 	
-<!-- attr: {style: "font-size:40px"} -->
+<!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # The Trainers Team
 <img src="https://github.com/TelerikAcademy/Common/tree/master/revealjs-theme/css/imgs/kristian-tsuklev.jpg" style="float:right" height="240" />
 *   **Kristiyan Tsaklev**
