@@ -1,12 +1,12 @@
 ## 03. Database Modelling
-### [View Presentation online]()
+### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html)
 ### Table of Contents
-*   Data Modelling – Principles - [go to slide]()
-*	Data Types in SQL Server - [go to slide]()
-*	Creating Databases in SQL Server - [go to slide]()
-*	Creating E/R Diagrams and Tables - [go to slide]()
-	*	Defining a Primary Key and Identity Columns - [go to slide]()
-	*	Creating Relationships between the Tables - [go to slide]()
-		*	One-to-many, Many-to-many, One-to-one - [go to slide]()
-*	Naming Conventions - [go to slide]()
-*	Data Modelling in MySQL Workbench - [go to slide]()
+*   Data Modelling – Principles - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html#/data-modelling)
+*	Data Types in SQL Server - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html#/data-types)
+*	Creating Databases in SQL Server - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html#/creating-database)
+*	Creating E/R Diagrams and Tables - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html#/creating-diagrams)
+	*	Defining a Primary Key and Identity Columns - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html#/5/5)
+	*	Creating Relationships between the Tables - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html#/5/10)
+		*	One-to-many, Many-to-many, One-to-one
+*	Naming Conventions - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html#/naming)
+*	Data Modelling in MySQL Workbench - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/03.%20Database%20Modeling/Slides/index.html#/mysql-diagrams)
