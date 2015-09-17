@@ -313,11 +313,11 @@
 *	To move MySQL database to another location
 	*	Use SQL export / SQL import feature
 *	Export a database to SQL script
-	*	MySQL Workbench  Server Administration  Data Export  Export to Self-Contained File
-	*	phpMyAdmin  Export  SQL
+	*	MySQL Workbench > Server Administration > Data Export > Export to Self-Contained File
+	*	phpMyAdmin > Export > SQL
 *	Import a database from SQL script
 	*	Just execute the script in Workbench
-	*	phpMyAdmin  Import  SQL
+	*	phpMyAdmin > Import > SQL
 
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section', hasScriptWrapper: true} -->
