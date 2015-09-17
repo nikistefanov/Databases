@@ -245,12 +245,65 @@ photo and date.
 # Database Modelling with SQL Server Management Studio
 ## Naming Conventions
 
-# 
+# Naming Conventions
+*	Tables
+	*	Each word is capitalized (Pascal Case)
+	*	In English, plural
+	*	Examples: `Users`, `PhotoAlbums`, `Countries`
+*	Columns
+	*	In English, singular
+	*	Each word is capitalized (Pascal Case)
+	*	Avoid reserved words (e.g. `key`, `int`, `date`)
+	*	Examples: `FirstName`, `OrderDate`, `Price`
 
+# Naming Conventions
+*	Primary key
+	*	Use "`Id`" or `name_of_the_table` + "Id"
+	*	Example: in the `Users` table the PK column should be be called `Id` or `UserId`
+*	Foreign key
+	*	Use the name of the referenced table + "`Id`"
+	*	Example: in the `Users` table the foreign key column that references the `Groups` table should be named `GroupId`
+
+# Naming Conventions
+*	Relationship names (constraints)
+	*	In English, Pascal Case
+	*	"`FK_`" + `table1` + "`_`" + `table2`
+	*	For example: `FK_Users_Groups`
+*	Index names
+	*	"`IX_`" + `table` + `column`
+	*	For example: `IX_Users_UserName`
+
+# Naming Conventions
+*	Unique key constraints names
+	*	"`UK_`" + `table` + `column`
+	*	For instance: `UK_Users_UserName`
+*	Views names
+	*	`V_` + `name`
+	*	Example: `V_BGCompanies`
+*	Stored procedures names
+	*	`usp_` + `name`
+	*	Example: `usp_InsertCustomer(@name)`
+
+<!-- attr: { class: 'slide-section' } -->
+# Database Modelling with SQL Server Management Studio
+## Live Demo
 
 <!-- section start -->
-<!-- attr: {id: '', class: 'slide-section'} -->
-#
+<!-- attr: {id: 'mysql-diagrams', class: 'slide-section'} -->
+# Data Modelling in MySQL
+## Creating E/R Diagrams with MySQL Workbench
+
+# E/R Diagrams in MySQL Workbench
+*	MySQL Workbench supports database schema design (E/R diagrams)
+	*	Can `reverse engineer` an existing database
+	*	Can `forward engineer` the diagram into SQL script / existing / new database
+	*	Can `synchronize schema changes` with existing database
+	*	User-unfriendly UI but  better than nothing
+		*	Edit tables, relationships, indices, triggers, …
+
+<!-- attr: { class: 'slide-section' } -->
+# Data Modeling in MySQL
+## Live Demo
 
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section'} -->
