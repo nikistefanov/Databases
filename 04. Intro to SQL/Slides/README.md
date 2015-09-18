@@ -243,17 +243,35 @@ FROM Employees
 </div>
 <img class="slide-image" src="imgs/dep-dist.png" style="left:60%; top:66%; height:20%" />
 
-<!-- attr: { hasScriptWrapper: true } -->
+<!-- attr: { hasScriptWrapper: true, style: 'font-size:0.9em' } -->
 # Set Operations: UNION, INTERSECT and EXCEPT
+*	`UNION` combines the results from several SELECT statements
+	*	The columns count and types should match
+
+<div style="width: 65%">
+```sql
+SELECT FirstName AS Name
+FROM Employees
+UNION
+SELECT LastName AS Name
+FROM Employees
+```
+</div>
+<img class="slide-image" src="imgs/union.png" style="left:74%; top:44%; height:30%" />
+
+*	`INTERSECT`/`EXCEPT` perform logical intersection/difference between given two sets of records
+
+<!-- attr: { hasScriptWrapper: true } -->
+# Limiting the Rows Selected
 *	Restrict the rows returned by using the WHERE clause:
 
-<div style="width: 62%">
+<div style="width: 63%">
 ```sql
 SELECT LastName, DepartmentID
 FROM Employees WHERE DepartmentID = 1
 ```
 </div>
-<img class="slide-image" src="imgs/where.png" style="left:60%; top:30%; height:30%" />
+<img class="slide-image" src="imgs/where.png" style="left:62%; top:24%; height:25%" />
 
 *	More examples:
 
