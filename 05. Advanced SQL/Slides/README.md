@@ -17,7 +17,6 @@
 *	Aggregating Data
 	*	Group Functions and `GROUP` `BY`
 *	Microsoft SQL Server Functions
-*	SQL Server Data Types
 *	Data Definition Language (DDL)
 *	Creating Tables in MS SQL Server
 *	Transactions
