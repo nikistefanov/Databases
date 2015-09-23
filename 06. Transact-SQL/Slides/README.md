@@ -531,6 +531,7 @@ UPDATE Towns SET Name='' WHERE TownId=1
 # Instead Of Triggers
 *	Defined by using `INSTEAD OF`
 
+<div>
 ```sql
 
 CREATE TABLE Accounts(
@@ -548,6 +549,7 @@ AS
   WHERE a.Active = 'Y'  
 GO
 ```
+</div>
 
 <!-- section start -->
 <!-- attr: {id: 'user-functions', class: 'slide-section'} -->
