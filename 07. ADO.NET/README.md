@@ -10,7 +10,7 @@
     *   DB Interfaces and Classes - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/07.%20ADO.NET/Slides/index.html#/primary-provider-classes-and-interfaces-in-ado.net)    
 *   Accessing SQL Server from ADO.NET (Connected Model) - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/07.%20ADO.NET/Slides/index.html#/connecting-to-sql-server)
     *   Connecting with SqlConnection - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/07.%20ADO.NET/Slides/index.html#/sql-client-data-provider)
-    *   Using SqlCommand and SqlDataReader - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/07.%20ADO.NET/Slides/index.html#/the-sqlCommand-class)
+    *   Using SqlCommand and SqlDataReader - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/07.%20ADO.NET/Slides/index.html#/the-sqlcommand-class)
     *   Parametrized Queries - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/07.%20ADO.NET/Slides/index.html#/the-sqlparameter-class)
 *   SQL Injection - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/07.%20ADO.NET/Slides/index.html#/sql-injection)
     *   What is SQL Injection and How to Avoid It?

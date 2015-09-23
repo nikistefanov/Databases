@@ -22,7 +22,7 @@
     *   [DB Interfaces and Classes](#primary-provider-classes-and-interfaces-in-ado.net)    
 *   [Accessing SQL Server from ADO.NET (Connected Model)](#connecting-to-sql-server)
     *   [Connecting with SqlConnection](#sql-client-data-provider)
-    *   [Using SqlCommand and SqlDataReader](#the-sqlCommand-class)
+    *   [Using SqlCommand and SqlDataReader](#the-sqlcommand-class)
     *   [Parametrized Queries](#the-sqlparameter-class)
     
 <!-- attr: { class:'table-of-contents' } -->
