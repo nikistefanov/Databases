@@ -529,8 +529,9 @@ UPDATE Towns SET Name='' WHERE TownId=1
 *	This will cause and error <!-- .element; class="fragment balloon" style="top:72%; left:40%" -->
 
 # Instead Of Triggers
-*	Defined by using `INSTEAD OF`.
+*	Defined by using `INSTEAD OF`
 
+<div>
 ```sql
 CREATE TABLE Accounts(
   Username varchar(10) NOT NULL PRIMARY KEY,
@@ -547,6 +548,7 @@ AS
   WHERE a.Active = 'Y'  
 GO
 ```
+</div>
 
 <!-- section start -->
 <!-- attr: {id: 'user-functions', class: 'slide-section'} -->
@@ -566,7 +568,7 @@ GO
 # Creating and Modifying Functions
 *	To create / modify / delete function use:
 	*	`CREATE FUNCTION &lt;function_name> RETURNS &lt;datatype> AS …`
-	*	`ALTER FUNCTION / DROP FUNCTION`
+	*	`ALTER FUNCTION`/`DROP FUNCTION`
 
 ```sql
 CREATE FUNCTION ufn_CalcBonus(@salary money)
