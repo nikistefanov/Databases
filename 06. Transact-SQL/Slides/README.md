@@ -11,27 +11,29 @@
 </div>
 
 <!-- section start -->
-<!-- attr: {id: 'table-of-contents'} -->
+<!-- attr: {id:'table-of-contents', class:'table-of-contents'} -->
 # Table of Contents
 *   Transact-SQL Programming Language
 	*	[Data Definition Language](#data-definition-language-ddl)
 	*	[Data Control Language](#data-control-language-dcl)
-	*	Data Manipulation Language
-	*	Syntax Elements
-*	Stored Procedures
+	*	[Data Manipulation Language](#data-manipulation-language-dml)
+	*	[Identifiers, Variables, Data Types and Expressions](#identifiers)
+	*	[Control-of-Flow Language Elements](#control-of-flow-language-elements)
+*	[Stored Procedures](#stored-procedures)
 	*	Introduction To Stored Procedures
 	*	Using Stored Procedures
-	*	Stored Procedures with Parameters
+	*	[Stored Procedures with Parameters ](#stored-procedures-1)
 
+<!-- attr: {class:'table-of-contents'} -->
 # Table of Contents
-*	Triggers
-	*	After Triggers
-	*	Instead Of Triggers
-*	User-Defined Functions
-	*	Scalar User-Defined Functions
-	*	Multi-Statement Table-Valued Functions
-	*	Inline Table-Valued Functions
-*	Database Cursors
+*	[Triggers](#triggers)
+	*	[After Triggers](#after-triggers)
+	*	[Instead Of Triggers](#instead-of-triggers)
+*	[User-Defined Functions](#user-defined-functions)
+	*	[Scalar User-Defined Functions](#scalar-user-defined-functions)
+	*	[Inline Table-Valued Functions](#inline-table-valued-functions)
+	*	[Multi-Statement Table-Valued Functions](#multi-statement-table-valued-functions)
+*	[Database Cursors](#working-with-cursors)
 
 <!-- section start -->
 <!-- attr: {id: 'transact-sql-intro', class: 'slide-section'} -->
@@ -53,6 +55,7 @@
 	*	Data Control Language (DCL) Statements
 	*	Data Manipulation Language (DML) Statements
 
+<!-- attr: { id:'data-definition-language-ddl' } -->
 # Data Definition Language (DDL)
 *	Used to create, change and delete database objects (tables and others)
 	*	`CREATE &lt;object> &lt;definition>`
@@ -61,6 +64,7 @@
 *	The `&lt;object>` can be a table, view, stored procedure, function, etc.
 	*	Some DDL commands require specific permissions
 
+<!-- attr: { id:'data-control-language-dcl' } -->
 # Data Control Language (DCL)
 *	Used to set / change permissions
 	*	`GRANT` – grants permissions
@@ -75,6 +79,7 @@ GO
 
 *	As with DDL statements you must have the proper permissions
 
+<!-- attr: { id:'data-manipulation-language-dcl' } -->
 # Data Manipulation Language (DML)
 *	Used to retrieve and modify table data
 	*	`SELECT` – query table data
@@ -129,6 +134,7 @@ GO
 SELECT 'The table is: ' + @table
 ```
 
+<!-- attr: { id:'identifiers' } -->
 # Identifiers
 *	Identifiers in SQL Server (e.g. table names)
 	*	Alphabetical character + sequence of letters, numerals and symbols, e.g. `FirstName`
@@ -217,6 +223,7 @@ SELECT
 FROM Employees
 ```
 
+<!-- attr: { id:'control-of-flow-language-elements' } --> 
 # Control-of-Flow Language Elements
 *	Statement Level
 	*	`BEGIN` … `END` block
@@ -374,7 +381,7 @@ DROP PROC usp_SelectSeniorEmployees
 EXEC sp_depends 'usp_SelectSeniorEmployees'
 ```
 
-<!-- attr: { class:'slide-section' } -->
+<!-- attr: { id:'stored-procedures-1', class:'slide-section' } -->
 # Stored Procedures
 ## Using Parameters
 
@@ -506,7 +513,7 @@ WHERE EmployeeId = @newEmployeeId
 *	Instead-of triggers
 	*	Replace the actual database operations
 
-<!-- attr: { hasScriptWrapper:true } -->
+<!-- attr: { id:'after-triggers', hasScriptWrapper:true } -->
 # After Triggers
 *	Also known as "for-triggers" or just "triggers"
 *	Defined by the keyword `FOR`
@@ -528,6 +535,7 @@ UPDATE Towns SET Name='' WHERE TownId=1
 
 *	This will cause and error <!-- .element; class="fragment balloon" style="top:72%; left:40%" -->
 
+<!-- attr: { id:'instead-of-triggers' } -->
 # Instead Of Triggers
 *	Defined by using `INSTEAD OF`
 <p></p>
@@ -549,7 +557,7 @@ GO
 ```
 
 <!-- section start -->
-<!-- attr: {id: 'user-functions', class: 'slide-section'} -->
+<!-- attr: {id: 'user-defined-functions', class: 'slide-section'} -->
 # User-Defined Functions
 
 # Types of User-Defined Functions
@@ -581,6 +589,7 @@ BEGIN
 END
 ```
 
+<!-- attr: { id:'scalar-user-defined-functions' } -->
 # Scalar User-Defined Functions
 *	Can be invoked at any place where a scalar expression of the same data type is allowed
 *	`RETURNS` clause
@@ -589,6 +598,7 @@ END
 *	Function body is defined within a `BEGIN…END` block
 *	Should end with `RETURN` `&lt;some value>`
 
+<!-- attr: {id:'inline-table-valued-functions' } -->
 # Inline Table-Valued Functions
 *	`Inline table-valued functions`
 	*	Return a table as result (just like a view)
@@ -621,6 +631,7 @@ RETURN (
 SELECT * FROM fn_CustomerNamesInRegion(N'WA')
 ```
 
+<!-- attr: { id:'multi-statement-table-valued-functions' } -->
 # Multi-Statement Table-Valued Functions
 *	`BEGIN` and `END` enclose multiple statements
 *	`RETURNS` clause –  specifies table data type
@@ -645,7 +656,7 @@ END
 ```
 
 <!-- section start -->
-<!-- attr: {id: 'cursors', class: 'slide-section'} -->
+<!-- attr: {id: 'working-with-cursors', class: 'slide-section'} -->
 # Working with Cursors 
 ## Processing Each Record in a Record Set
 
