@@ -529,7 +529,7 @@ UPDATE Towns SET Name='' WHERE TownId=1
 *	This will cause and error <!-- .element; class="fragment balloon" style="top:72%; left:40%" -->
 
 # Instead Of Triggers
-*	Defined by using `INSTEAD` `OF`
+*	Defined by using `INSTEAD OF`.
 
 ```sql
 CREATE TABLE Accounts(

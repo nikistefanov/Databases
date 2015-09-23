@@ -17,8 +17,7 @@
 	*	_Example_: '`oistmiahf`' will return '`Sofia`', '`Smith`', … but not '`Rob`' and '`Guy`'.
 1.	Using database cursor write a T-SQL script that scans all employees and their addresses and prints all pairs of employees that live in the same town.
 1.	*Write a T-SQL script that shows for each town a list of all employees that live in it.
-	*	_Sample output_:
-	
+	*	_Sample output_:	
 ```sql
 Sofia -> Martin Kulov, George Denchev
 Ottawa -> Jose Saraiva
