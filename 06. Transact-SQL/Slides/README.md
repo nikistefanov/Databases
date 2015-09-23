@@ -177,40 +177,499 @@ GO
 *	Cursor – iterator over record sets
 *	User-defined types
 
+# System Functions
+*	Aggregate functions – multiple values > value
 
+```sql
+SELECT AVG(Salary) AS AvgSalary
+FROM Employees
+```
+*	Scalar functions – single value > single value
 
+```sql
+SELECT DB_NAME() AS [Active Database]
+```
+*	Rowset functions – return a record set
 
+```sql
+SELECT *
+FROM OPENDATASOURCE('SQLNCLI','Data Source =
+  London\Payroll;Integrated Security = SSPI').
+  AdventureWorks.HumanResources.Employee
+```
 
+# Operators in SQL Server
+*	Types of operators
+	*	Arithmetic, e.g. `+`, `-`, `*`, `/`
+	*	Comparison, e.g. `=`, `<>`
+	*	String concatenation (`+`)
+	*	Logical, e.g. `AND`, `OR`, `EXISTS`
 
+# Expressions
+*	Expressions are combination of symbols and operators
+	*	Evaluated to single scalar value
+	*	Result data type is dependent on the elements within the expression
 
+```sql
+SELECT 
+  DATEDIFF(Year, HireDate, GETDATE()) * Salary / 1000
+  AS [Annual Bonus]
+FROM Employees
+```
 
+# Control-of-Flow Language Elements
+*	Statement Level
+	*	`BEGIN` … `END` block
+	*	`IF` … `ELSE` block
+	*	`WHILE` constructs
+*	Row Level
+	*	`CASE` statements
 
+# `IF` … `ELSE`
+*	The `IF` … `ELSE` conditional statement is like in C#
 
+```sql
+IF ((SELECT COUNT(*) FROM Employees) >= 100)
+  BEGIN
+    PRINT 'Employees are at least 100'
+  END
+```
+```sql
+IF ((SELECT COUNT(*) FROM Employees) >= 100)
+  BEGIN
+    PRINT 'Employees are at least 100'
+  END
+ELSE
+  BEGIN
+    PRINT 'Employees are less than 100'
+  END
+```
 
+# `WHILE` Loops
+*	While loops are like in C#
 
+```sql
+DECLARE @n int = 10
+PRINT 'Calculating factoriel of ' + 
+  CAST(@n as varchar) + ' ...'
+
+DECLARE @factorial numeric(38) = 1
+WHILE (@n > 1)
+  BEGIN
+    SET @factorial = @factorial * @n
+    SET @n = @n - 1
+  END
+
+PRINT @factorial
+```
+
+# `CASE` Statement	
+*	`CASE` examines a sequence of expressions and returns different value depending on the evaluation results
+
+```sql
+SELECT Salary, [Salary Level] =
+  CASE
+    WHEN Salary BETWEEN 0 and 9999 THEN 'Low'
+    WHEN Salary BETWEEN 10000 and 30000 THEN 'Average'
+    WHEN Salary > 30000 THEN 'High'
+    ELSE 'Unknown'
+  END
+FROM Employees
+```
+
+# Control-of-Flow – Example
+```sql
+DECLARE @n tinyint
+SET @n = 5
+IF (@n BETWEEN 4 and 6)
+ BEGIN
+  WHILE (@n > 0)
+   BEGIN
+    SELECT @n AS 'Number',
+      CASE
+        WHEN (@n % 2) = 1
+          THEN 'EVEN'
+        ELSE 'ODD'
+      END AS 'Type'
+    SET @n = @n - 1
+   END
+ END
+ELSE
+ PRINT 'NO ANALYSIS'
+GO
+```
+
+<!-- section start -->
+<!-- attr: {id: 'stored-procedures', class: 'slide-section'} -->
+# Stored Procedures
+
+# What are Stored Procedures?
+*	`Stored procedures` are named sequences of T-SQL statements
+	*	Encapsulate repetitive program logic
+	*	Can accept input parameters
+	*	Can return output results
+*	Benefits of stored procedures
+	*	Share application logic
+	*	Improved performance
+	*	Reduced network traffic
+
+# Creating Stored Procedures
+*	`CREATE` `PROCEDURE` … `AS` …
+	*	Example:
+
+```sql
+USE TelerikAcademy
+GO
+
+CREATE PROC dbo.usp_SelectSeniorEmployees
+AS
+  SELECT * 
+  FROM Employees
+  WHERE DATEDIFF(Year, HireDate, GETDATE()) > 5
+GO
+```
+
+# Executing Stored Procedures
+*	Executing a stored procedure by EXEC
+
+```sql
+EXEC usp_SelectSeniorEmployees
+```
+
+*	Executing a stored procedure within an `INSERT` statement
+
+```sql
+INSERT INTO Customers
+EXEC usp_SelectSpecialCustomers
+```
+
+# Altering Stored Procedures
+*	Use the `ALTER PROCEDURE` statement
+
+```sql
+USE TelerikAcademy
+GO
+
+ALTER PROC dbo.usp_SelectSeniorEmployees
+AS
+  SELECT FirstName, LastName, HireDate, 
+    DATEDIFF(Year, HireDate, GETDATE()) as Years
+  FROM Employees
+  WHERE DATEDIFF(Year, HireDate, GETDATE()) > 5
+  ORDER BY HireDate
+GO
+```
+
+# Dropping Stored Procedures
+*	`DROP` `PROCEDURE`
+	*	Procedure information is removed from the `sysobjects` and `syscomments` system tables
+
+```sql
+DROP PROC usp_SelectSeniorEmployees
+```
 	
+*	You could check if any objects depend on the stored procedure by executing the system stored procedure `sp_depends`
+
+```sql
+EXEC sp_depends 'usp_SelectSeniorEmployees'
+```
+
+<!-- attr: { class:'slide-section' } -->
+# Stored Procedures
+## Using Parameters
+
+# Defining Parameterized Procedures
+*	To define a parameterized procedure use the syntax:
+
+```sql
+CREATE PROCEDURE usp_ProcedureName 
+[(@parameter1Name parameterType,
+  @parameter2Name parameterType,…)] AS …
+```
+*	Choose carefully the parameter types, and provide appropriate default values
+
+```sql
+CREATE PROC usp_SelectEmployeesBySeniority(
+  @minYearsAtWork int = 5) AS …
+```
+
+# Parameterized Stored Procedures – Example
+
+```sql
+CREATE PROC usp_SelectEmployeesBySeniority(
+  @minYearsAtWork int = 5)
+AS
+  SELECT FirstName, LastName, HireDate, 
+    DATEDIFF(Year, HireDate, GETDATE()) as Years
+  FROM Employees
+  WHERE DATEDIFF(Year, HireDate, GETDATE()) >
+    @minYearsAtWork
+  ORDER BY HireDate
+GO
+
+EXEC usp_SelectEmployeesBySeniority 10
+
+EXEC usp_SelectEmployeesBySeniority
+```
+
+<!-- attr: { style:'font-size:0.9em' } -->
+# Passing Parameter Values
+*	Passing values by parameter name
+
+```sql
+EXEC usp_AddCustomer 
+    @customerID = 'ALFKI',
+    @contactName = 'Maria Anders',
+    @companyName = 'Alfreds Futterkiste',
+    @contactTitle = 'Sales Representative',
+    @address = 'Obere Str. 57',
+    @city = 'Berlin',
+    @postalCode = '12209',
+    @country = 'Germany',
+    @phone = '030-0074321' 
+```
+
+*	Passing values by position
+
+```sql
+EXEC usp_AddCustomer 'ALFKI2', 'Alfreds Futterkiste',
+'Maria Anders', 'Sales Representative', 'Obere Str. 57',
+'Berlin', NULL, '12209', 'Germany', '030-0074321'
+```
+
+<!-- attr: { hasScriptWrapper:true } -->
+# Returning Values Using OUTPUT Parameters
+
+```sql
+CREATE PROCEDURE dbo.usp_AddNumbers
+   @firstNumber smallint,
+   @secondNumber smallint,
+   @result int OUTPUT
+AS
+   SET @result = @firstNumber + @secondNumber
+GO
+
+DECLARE @answer smallint
+EXECUTE usp_AddNumbers 5, 6, @answer OUTPUT
+SELECT 'The result is: ', @answer
+
+-- The result is: 11
+```
+
+<div class="fragment">
+	<div class="balloon" style="top:28%; left:60%">Creating stored procedure</div>
+	<div class="balloon" style="top:57%; left:60%">Executing stored procedure</div>
+	<div class="balloon" style="top:75%; left:60%">Execution results</div>
+</div>
+
+<!-- attr: { style:'font-size:0.9em' } -->
+# Returning Values Using The Return Statement
+
+```sql
+CREATE PROC usp_NewEmployee(
+  @firstName nvarchar(50), @lastName nvarchar(50),
+  @jobTitle nvarchar(50), @deptId int, @salary money)
+AS
+  INSERT INTO Employees(FirstName, LastName, 
+    JobTitle, DepartmentID, HireDate, Salary)
+  VALUES (@firstName, @lastName, @jobTitle, @deptId,
+    GETDATE(), @salary)
+  RETURN SCOPE_IDENTITY()
+GO
+DECLARE @newEmployeeId int
+EXEC @newEmployeeId = usp_NewEmployee
+  @firstName='Steve', @lastName='Jobs', @jobTitle='Trainee',
+  @deptId=1, @salary=7500
+SELECT EmployeeID, FirstName, LastName
+FROM Employees
+WHERE EmployeeId = @newEmployeeId
+```
 
 <!-- section start -->
-<!-- attr: {id: '', class: 'slide-section'} -->
-# 
-## 
+<!-- attr: {id: 'triggers', class: 'slide-section'} -->
+# Triggers
+
+# What Are Triggers?
+*	Triggers are very much like stored procedures
+	*	Called in case of specific event
+*	We do not call triggers explicitly
+	*	Triggers are attached to a table
+	*	Triggers are fired when a certain SQL statement is executed against the contents of the table
+	*	E.g. when a new row is inserted in given table
+
+# Types of Triggers
+*	There are two types of triggers
+	*	`After` triggers
+	*	`Instead-of` triggers
+*	After triggers
+	*	Fired when the SQL operation has completed and just before committing to the database
+*	Instead-of triggers
+	*	Replace the actual database operations
+
+<!-- attr: { hasScriptWrapper:true } -->
+# After Triggers
+*	Also known as "for-triggers" or just "triggers"
+*	Defined by the keyword `FOR`
+
+```sql
+CREATE TRIGGER tr_TownsUpdate ON Towns FOR UPDATE
+AS
+  IF (EXISTS(SELECT * FROM inserted WHERE Name IS NULL) OR
+     EXISTS(SELECT * FROM inserted WHERE LEN(Name) = 0))
+    BEGIN
+      RAISERROR('Town name cannot be empty.', 16, 1)
+      ROLLBACK TRAN
+      RETURN
+    END
+GO
+
+UPDATE Towns SET Name='' WHERE TownId=1
+```
+
+*	This will cause and error <!-- .element; class="fragment balloon" style="top:72%; left:40%" -->
+
+# Instead Of Triggers
+*	Defined by using `INSTEAD` `OF`
+
+```sql
+CREATE TABLE Accounts(
+  Username varchar(10) NOT NULL PRIMARY KEY,
+  [Password] varchar(20) NOT NULL,
+  Active CHAR NOT NULL DEFAULT 'Y')
+GO
+  
+CREATE TRIGGER tr_AccountsDelete ON Accounts
+  INSTEAD OF DELETE
+AS
+  UPDATE a SET Active = 'N'
+  FROM Accounts a JOIN DELETED d 
+    ON d.Username = a.Username
+  WHERE a.Active = 'Y'  
+GO
+```
 
 <!-- section start -->
-<!-- attr: {id: '', class: 'slide-section'} -->
-# 
-## 
+<!-- attr: {id: 'user-functions', class: 'slide-section'} -->
+# User-Defined Functions
+
+# Types of User-Defined Functions
+*	Scalar functions (like `SQRT(…)`)
+	*	Similar to the built-in functions
+*	Table-valued functions
+	*	Similar to a view with parameters
+	*	Return a table as a result of single `SELECT` statement
+*	Aggregate functions (like `SUM(…)`)
+	*	Perform calculation over set of inputs values
+	*	Defined through external .NET functions
+
+<!-- attr: { style:'font-size:0.95em' } -->
+# Creating and Modifying Functions
+*	To create / modify / delete function use:
+	*	`CREATE FUNCTION &lt;function_name> RETURNS &lt;datatype> AS …`
+	*	`ALTER FUNCTION / DROP FUNCTION`
+
+```sql
+CREATE FUNCTION ufn_CalcBonus(@salary money)
+  RETURNS money
+AS
+BEGIN
+  IF (@salary < 10000)
+    RETURN 1000
+  ELSE IF (@salary BETWEEN 10000 and 30000)
+    RETURN @salary / 20
+  RETURN 3500
+END
+```
+
+# Scalar User-Defined Functions
+*	Can be invoked at any place where a scalar expression of the same data type is allowed
+*	`RETURNS` clause
+	*	Specifies the returned data type
+	*	Return type is any data type except `text`, `ntext`, `image`, `cursor` or `timestamp`
+*	Function body is defined within a `BEGIN…END` block
+*	Should end with `RETURN` `&lt;some value>`
+
+# Inline Table-Valued Functions
+*	`Inline table-valued functions`
+	*	Return a table as result (just like a view)
+	*	Could take some parameters
+*	The content of the function is a single `SELECT` statement
+	*	The function body does not use `BEGIN` and `END`
+	*	`RETURNS` specifies `TABLE` as data type
+*	The returned table structure is defined by the result set
+
+<!-- attr: { style:'font-size:0.85em' } -->
+# Inline Table-Valued Functions Example
+*	Defining the function
+
+```sql
+USE Northwind
+GO
+CREATE FUNCTION fn_CustomerNamesInRegion
+  ( @regionParameter nvarchar(30) )
+RETURNS TABLE
+AS
+RETURN (
+  SELECT CustomerID, CompanyName
+  FROM Northwind.dbo.Customers
+  WHERE Region = @regionParameter
+)
+```
+*	Calling the function with a parameter
+
+```sql
+SELECT * FROM fn_CustomerNamesInRegion(N'WA')
+```
+
+# Multi-Statement Table-Valued Functions
+*	`BEGIN` and `END` enclose multiple statements
+*	`RETURNS` clause –  specifies table data type
+*	`RETURNS` clause – names and defines the table
+
+# Multi-Statement Table-Valued Function – Example
+```sql
+CREATE FUNCTION fn_ListEmployees(@format nvarchar(5))
+RETURNS @tbl_Employees TABLE
+  (EmployeeID int PRIMARY KEY NOT NULL,
+  [Employee Name] Nvarchar(61) NOT NULL)
+AS
+BEGIN
+  IF @format = 'short'
+    INSERT @tbl_Employees
+    SELECT EmployeeID, LastName FROM Employees
+  ELSE IF @format = 'long'
+    INSERT @tbl_Employees SELECT EmployeeID,
+    (FirstName + ' ' + LastName) FROM Employees
+  RETURN
+END
+```
 
 <!-- section start -->
-<!-- attr: {id: '', class: 'slide-section'} -->
-# 
-## 
+<!-- attr: {id: 'cursors', class: 'slide-section'} -->
+# Working with Cursors 
+## Processing Each Record in a Record Set
 
-<!-- section start -->
-<!-- attr: {id: '', class: 'slide-section'} -->
-# 
-## 
+# Working with Cursors
+```sql
+DECLARE empCursor CURSOR READ_ONLY FOR
+  SELECT FirstName, LastName FROM Employees
+
+OPEN empCursor
+DECLARE @firstName char(50), @lastName char(50)
+FETCH NEXT FROM empCursor INTO @firstName, @lastName
+
+WHILE @@FETCH_STATUS = 0
+  BEGIN
+    PRINT @firstName + ' ' + @lastName
+    FETCH NEXT FROM empCursor 
+    INTO @firstName, @lastName
+  END
+
+CLOSE empCursor
+DEALLOCATE empCursor
+```
 
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section'} -->
 # Questions
-## Databases
+## Transact SQL
