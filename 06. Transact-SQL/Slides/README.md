@@ -530,9 +530,8 @@ UPDATE Towns SET Name='' WHERE TownId=1
 
 # Instead Of Triggers
 *	Defined by using `INSTEAD OF`
-
+<p></p>
 ```sql
-
 CREATE TABLE Accounts(
   Username varchar(10) NOT NULL PRIMARY KEY,
   [Password] varchar(20) NOT NULL,
