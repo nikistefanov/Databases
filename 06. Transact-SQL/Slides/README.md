@@ -14,8 +14,8 @@
 <!-- attr: {id: 'table-of-contents'} -->
 # Table of Contents
 *   Transact-SQL Programming Language
-	*	Data Definition Language
-	*	Data Control Language
+	*	[Data Definition Language](#data-definition-language-ddl)
+	*	[Data Control Language](#data-control-language-dcl)
 	*	Data Manipulation Language
 	*	Syntax Elements
 *	Stored Procedures
@@ -23,7 +23,7 @@
 	*	Using Stored Procedures
 	*	Stored Procedures with Parameters
 
- # Table of Contents
+# Table of Contents
 *	Triggers
 	*	After Triggers
 	*	Instead Of Triggers
