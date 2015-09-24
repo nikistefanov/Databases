@@ -11,21 +11,21 @@
 </div>
 
 <!-- section start -->
-<!-- attr: {id: 'table-of-contents', class:'table-of-contents'} -->
+<!-- attr: {id: 'table-of-contents', class:'table-of-contents' } -->
 # Table of Contents
-*   [ORM Technologies – Basic Concepts](#introduction-to-orm)
-*   [Entity Framework – Overview](#entity-framework-overview)
-*   [Reading Data with EF](#reading-data-with-entity-framework)
-*   [Create, Update, Delete using Entity Framework](#create-update-delete-with-entity-framework)
+*   [ORM Technologies – Basic Concepts](#orm-technologies)
+*   [Entity Framework – Overview](#overview-of-ef)
+*   [Reading Data with EF](#the-dbcontext-class)
+*   [Create, Update, Delete using Entity Framework](#creating-new-data)
 *   [Extending Entity Classes](#extending-entity-classes)
 *   [Executing Native SQL Queries](#executing-native-sql-queries)
-*   [Joining and Grouping Tables](#joining-and-grouping-tables)
+*   [Joining and Grouping Tables](#joining-tables-in-ef)
 *   [Attaching and Detaching Objects](#attaching-and-detaching-objects)
 
 <!-- section start -->
-<!-- attr: {id: 'introduction-to-orm', class: 'slide-section'} -->
-# Introduction to ORM
-## Object-Relational Mapping (ORM) Technologies
+<!-- attr: {id: 'orm-technologies', class: 'slide-section', showInPresentation:true} -->
+<!-- # Introduction to ORM
+## Object-Relational Mapping (ORM) Technologies -->
 
 <!-- attr: { style:'font-size:0.95em' } -->
 # ORM Technologies
@@ -69,9 +69,9 @@
     *   Telerik OpenAccess ORM
 
 <!-- section start -->
-<!-- attr: {id: 'entity-framework-overview', class: 'slide-section'} -->
-# Entity Framework Overview
-## Object Relation Persistence Framework
+<!-- attr: {id: 'overview-of-ef', class: 'slide-section', showInPresentation:true} -->
+<!-- # Entity Framework Overview
+## Object Relation Persistence Framework -->
 
 # Overview of EF
 *   `Entity Framework` (`EF`) is a standard ORM framework, part of .NET
@@ -150,7 +150,7 @@
 ## [Demo]()
 
 <!-- section start -->
-<!-- attr: {id: 'reading-data-with-entity-framework', class: 'slide-section'} -->
+<!-- attr: {id: 'the-dbcontext-class', class: 'slide-section'} -->
 # Reading Data with Entity Framework
 
 # The DbContext Class
@@ -242,8 +242,8 @@ Console.WriteLine(query.ToString());
 ## [Demo](https://github.com/TelerikAcademy/Databases/blob/master/08.%20Entity%20Framework/Demo/ReadingWithLINQToEntities/ReadingWithLINQToEntities.cs)
 
 <!-- section start -->
-<!-- attr: {id: 'create-update-delete-with-entity-framework', class: 'slide-section'} -->
-# Create, Update, Delete using Entity Framework
+<!-- attr: {id: 'creating-new-data', class: 'slide-section', showInPresentation:true} -->
+<!-- # Create, Update, Delete using Entity Framework -->
 
 <!-- attr: { style:'font-size:0.95em' } -->
 # Creating New Data
@@ -297,9 +297,9 @@ northwindEntities.SaveChanges();
 ## [Demo](https://github.com/TelerikAcademy/Databases/blob/master/08.%20Entity%20Framework/Demo/UpdatingDeletingInsertingData/UpdatingDeletingInsertingData.cs)
 
 <!-- section start -->
-<!-- attr: {id: 'extending-entity-classes', class: 'slide-section'} -->
-# Extending Entity Classes
-## Add methods like ToString(), Equals(), etc…
+<!-- attr: {id: 'extending-entity-classes', class: 'slide-section', showInPresentation:true} -->
+<!-- # Extending Entity Classes
+## Add methods like ToString(), Equals(), etc… -->
 
 <!-- attr: { style:'font-size:0.95em' } -->
 # Extending Entity Classes
@@ -315,8 +315,8 @@ northwindEntities.SaveChanges();
 ## [Demo]()
 
 <!-- section start -->
-<!-- attr: {id: 'executing-native-sql-queries', class: 'slide-section'} -->
-# Executing Native SQL Queries
+<!-- attr: {id: 'executing-native-sql-queries', class: 'slide-section', showInPresentation:true} -->
+<!-- # Executing Native SQL Queries -->
 
 # Executing Native SQL Queries
 *   Executing a native SQL query in Entity Framework directly in its database store:
@@ -358,9 +358,9 @@ foreach (var emp in employees)
 ## [Demo]()
 
 <!-- section start -->
-<!-- attr: {id: 'joining-and-grouping-tables', class: 'slide-section'} -->
-# Joining and Grouping Tables
-## Join and Group Using LINQ
+<!-- attr: {id: 'joining-tables-in-ef', class: 'slide-section', showInPresentation:true} -->
+<!-- # Joining and Grouping Tables
+## Join and Group Using LINQ -->
 
 <!-- attr: { style:'font-size:0.9em' } -->
 # Joining Tables in EF
@@ -407,8 +407,8 @@ var groupedCustomers =
 ## [Demo](https://github.com/TelerikAcademy/Databases/blob/master/08.%20Entity%20Framework/Demo/JoinAndGroupDemo/JoinAndGroupExample.cs)
 
 <!-- section start -->
-<!-- attr: {id: 'attaching-and-detaching-objects', class: 'slide-section'} -->
-# Attaching and Detaching Objects
+<!-- attr: {id: 'attaching-and-detaching-objects', class: 'slide-section', showInPresentation:true} -->
+<!-- # Attaching and Detaching Objects -->
 
 # Attaching and Detaching Objects
 *   In Entity Framework, objects can be attached to or detached from an object context
