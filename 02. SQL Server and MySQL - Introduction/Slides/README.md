@@ -49,7 +49,6 @@
 <!-- attr: {id: 'sql-server-services', class: 'slide-section'} -->
 # Services of SQL Server 2012
 
-# MS SQL Server
 # Services of SQL Server 2012
 *	SQL Server – the database engine
 	*	Responsible for database management, data storage, queries, data manipulation, data integrity, transactions, locking, users, security
