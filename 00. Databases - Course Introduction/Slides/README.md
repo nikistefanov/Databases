@@ -25,7 +25,19 @@
 # Databases for Developers
 ## Coming To The Next Module
 
-# TODO:
+<!-- attr: { hasScriptWrapper:true } -->
+# What's Coming Next?
+* Finish HQC Course
+* Databases for Developers Course
+  * Lectures
+    * Mon, Tue, Wed from 18:00 to 22:00
+    * Friday from 10:30 to 18:00
+  * Practical exam after 4 weeks
+    * On the 23 October 2015
+
+[Curriculum](http://academy.telerik.com/images/default-source/Academy_Curriculum/ta_plan_bg.png?sfvrsn=0)
+
+[link to table in Forum](http://telerikacademy.com/Forum/Questions/179433/%D0%9E%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D1%8A%D1%87%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B4%D0%BE-%D0%BA%D1%80%D0%B0%D1%8F-%D0%BD%D0%B0-%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F%D1%82%D0%B0#forum-post-179433)
 
 
 <!-- section start -->
@@ -33,29 +45,35 @@
 # Databases – Program
 ## What Will We Cover in the Databases Course?
 
+<!-- attr: { hasScriptWrapper:true } -->
 # The Databases Course Program
+<ol>
+  <li>XML Basics</li>
+  <li>Processing XML in .NET</li>
+  <li>Processing JSON in .NET</li>
+  <li>Database Systems – Overview</li>
+  <li>SQL Server and MySQL – Introduction</li>
+  <li>Data Modeling and ER Diagrams</li>
+  <li>Intro to SQL</li>
+  <li>Advanced SQL</li>
+  <li>Transact-SQL</li>
+  <li>ADO.NET</li>
+</ol>
 
-1.	Database Systems – Overview
-2.	SQL Server and MySQL – Introduction
-3.	Data Modeling and ER Diagrams
-4.	Intro to SQL
-5.	Advanced SQL
-6.	Transact-SQL
-7.	ADO.NET
-8.	ADO.NET Entity Framework
-9.	Entity Framework Performance
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # The Databases Course Program -->
 
-# The Databases Course Program
-
-10. Code First in Entity Framework
-11. Database Performance
-12. Database Transactions
-13. NoSQL Databases
-14. XML Basics
-15. Processing XML in .NET
-16. Databases Team Work Project
-17. Exam Preparation
-18. Exam
+<ol start="11">
+  <li>ADO.NET Entity Framework</li>
+  <li>Entity Framework Performance</li>
+  <li>Code First in Entity Framework</li>
+  <li>Database Performance</li>
+  <li>Database Transactions</li>
+  <li>NoSQL Databases</li>
+  <li>Databases Team Work Project</li>
+  <li>Exam Preparation</li>
+  <li>Exam</li>
+</ol>
 
 <!-- section start -->
 <!-- attr: {class: 'slide-section', id: 'trainers'} -->
@@ -138,9 +156,9 @@
 
 # Course Evaluation
 
-*   **Practical exam** - 55%
+*   **Practical exam** - 50%
 *   **Practical exam peer review** - 10%
-*   **Homework** - 5%
+*   **Homework** - 10%
 *   **Team work** - 15%
 *   **Attendance** - 5%
 *   **Forum activity** - 5%
@@ -169,7 +187,8 @@
 		*	Homework comments are `not obligatory`
 		
 # Check Your Presence
-*	From now on you should check your presence on the barcode reader `2-3 times a day`:
+* Monday, Tuesday, Wednesday check your presence once between 17:30 and 18:30
+*	On Friday you should check your presence on the barcode reader `2-3 times a day`:
 	*	In the morning when lectures begin (~10:30)
 	*	After lunch break (~13:30)
 	*	When you have data structures and algorithms when the lecture starts (~18:00)
@@ -181,7 +200,7 @@
 
 # Course Web Site & Forums
 
-*	Register for the [Telerik Academy Forums](http://forums.academy.telerik.com/web-development/databases)
+*	Register for the [Telerik Academy Forums](http://telerikacademy.com/Forum/Category/57/databases)
 	*	Discuss the course exercises with your colleagues
 	*	Find solutions for the exercises
 	*	Share source code / discuss ideas
