@@ -25,7 +25,7 @@
 
 <!-- section start -->
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   The JSON Data Format
 ##   What is JSON? -->
 
@@ -63,7 +63,7 @@
 
 ```
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   Processing JSON in .NET
 ##   How to parse JSON in .NET? -->
 
@@ -81,7 +81,7 @@ var jsonPlace = serializer.Serialize(place);
 var objPlace = serializer.Deserialize<Place>(jsonPlace);
 ```
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   Simple Parsing with JavaScript Serializer -->
 ##   Demo
 
@@ -113,13 +113,13 @@ is parsed to
 
 ```
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   JavaScript Serializer Features -->
 ##   Demo
 
 <!-- section start -->
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   JSON.NET Overview
 ##   Better JSON parsing than with `JavaScriptSerializer` -->
 
@@ -151,7 +151,7 @@ Deserialize an object:
 var deserializedPlace = JsonConvert.DeserializeObject<Place>(serializedPlace);
 ```
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   Serializing and Deserializing Objects with JSON.NET -->
 ##   Demo
 
@@ -195,7 +195,7 @@ var person = JsonConvert.DeserializeAnonymousType(json, template);
 *   Should provide a template Object
 
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   Configuring JSON.NET -->
 ##   Demo
 
@@ -220,13 +220,13 @@ public class User
 *   `[JsonIgnore]` tells the parser to skip the property `Password`
 
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   JSON.NET Parsing of Objects -->
 ##   Demo
 
 <!-- section start -->
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #  LINQ-to-JSON
 ## Easier way to query JSON objects -->
 
@@ -249,13 +249,13 @@ jsonObj["places"].Select(
                  .Print();
 ```
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   LINQ-to-JSON -->
 ##   Demo
 
 <!-- section start -->
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   XML to JSON and JSON to XML
 ##   Made easy -->
 
@@ -274,7 +274,7 @@ XDocument xmlFromJson = JsonConvert.DeserializeXNode(json);
 ```
 
 
-<!-- attr: {id: 'slide-section', showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   XML to JSON and JSON to XML -->
 ##   Demo
 
