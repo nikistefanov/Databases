@@ -10,5 +10,3 @@
 * XML Parsers - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/01.%20XML%20Basics/Slides/index.html#/xml-parsers)
 * XPath Language - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/01.%20XML%20Basics/Slides/index.html#/xpath)
 * XSL Transformations - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/01.%20XML%20Basics/Slides/index.html#/xsl-transformations)
-
- - [go to slide]()
