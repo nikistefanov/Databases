@@ -1,16 +1,20 @@
+№ Course program for Databases 2015
+
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>#</th>
             <th>Lecture</th>
             <th>Date</th>
+            <th>Time</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>00</td>
             <td>Course Introduction</td>
-            <td rowspan="2">28 September 2015 (Mon) 18:00 - 22:00</td>
+            <td rowspan="2">28 September 2015 (Mon)</td>
+            <td rowspan="2">18:00 - 22:00</td>
         </tr>
         <tr>
             <td>01</td>
@@ -19,7 +23,8 @@
         <tr>
             <td>02</td>
             <td>Processing XML in .NET</td>
-            <td rowspan="2">29 September 2015 (Tue) 18:00 - 22:00</td>
+            <td rowspan="2">29 September 2015 (Tue)</td>
+            <td rowspan="2">18:00 - 22:00</td>
         </tr>
         <tr>
             <td>03</td>
@@ -28,7 +33,8 @@
         <tr>
             <td>04</td>
             <td>Database Systems - Overview</td>
-            <td rowspan="2">30 September 2015 (Wed) 18:00 - 22:00</td>
+            <td rowspan="2">30 September 2015 (Wed)</td>
+            <td rowspan="2">18:00 - 22:00</td>
         </tr>
         <tr>
             <td>05</td>
@@ -37,7 +43,8 @@
         <tr>
             <td>06</td>
             <td>Database Modeling</td>
-            <td rowspan="2">2 October 2015 (Fri) 10:30 - 18:00</td>
+            <td rowspan="2">2 October 2015 (Fri)</td>
+            <td rowspan="2">10:30 - 18:00</td>
         </tr>
         <tr>
             <td>07</td>
@@ -46,22 +53,26 @@
         <tr>
             <td>08</td>
             <td>Advanced SQL</td>
-            <td>5 October 2015 (Mon) 18:00 - 22:00</td>
+            <td>5 October 2015 (Mon)</td>
+            <td>18:00 - 22:00</td>
         </tr>
         <tr>
             <td>09</td>
             <td>Transact-SQL</td>
-            <td>6 October 2015 (Tue) 18:00 - 22:00</td>
+            <td>6 October 2015 (Tue)</td>
+            <td>18:00 - 22:00</td>
         </tr>
         <tr>
             <td>10</td>
             <td>ADO.NET</td>
-            <td>7 October 2015 (Wed) 18:00 - 22:00</td>
+            <td>7 October 2015 (Wed)</td>
+            <td>18:00 - 22:00</td>
         </tr>
         <tr>
             <td>11</td>
             <td>Entity Framework</td>
-            <td rowspan="2">9 October 2015 (Fri) 10:30 - 18:00</td>
+            <td rowspan="2">9 October 2015 (Fri)</td>
+            <td rowspan="2">10:30 - 18:00</td>
         </tr>
         <tr>
             <td>12</td>
@@ -70,17 +81,20 @@
         <tr>
             <td>13</td>
             <td>Entity Framework Code First</td>
-            <td>12 October 2015 (Mon) 18:00 - 22:00</td>
+            <td>12 October 2015 (Mon)</td>
+            <td>18:00 - 22:00</td>
         </tr>
         <tr>
             <td>14</td>
             <td>Database Performance</td>
-            <td>13 October 2015 (Tue) 18:00 - 22:00</td>
+            <td>13 October 2015 (Tue)</td>
+            <td>18:00 - 22:00</td>
         </tr>
         <tr>
             <td>15</td>
             <td>Database Transactions Concepts</td>
-            <td rowspan="2">14 October 2015 (Wed) 18:00 - 22:00</td>
+            <td rowspan="2">14 October 2015 (Wed)</td>
+            <td rowspan="2">18:00 - 22:00</td>
         </tr>
         <tr>
             <td>16</td>
@@ -89,7 +103,8 @@
         <tr>
             <td>17</td>
             <td>Non Relational Databases</td>
-            <td rowspan="3">16 October 2015 (Fri) 10:30 - 18:00</td>
+            <td rowspan="3">16 October 2015 (Fri)</td>
+            <td rowspan="3">10:30 - 18:00</td>
         </tr>
         <tr>
             <td>18</td>
@@ -102,17 +117,20 @@
         <tr>
             <td>20</td>
             <td>Exam Preparation</td>
-            <td>19 October 2015 (Mon) 14:00 - 20:00</td>
+            <td>19 October 2015 (Mon)</td>
+            <td>14:00 - 20:00</td>
         </tr>
         <tr>
             <td>21</td>
             <td>Teamwork Defence</td>
-            <td>20 October 2015 (Wed) 10:00 - 20:00</td>
+            <td>20 October 2015 (Wed)</td>
+            <td>10:00 - 20:00</td>
         </tr>
         <tr>
             <td>22</td>
             <td>Exam</td>
-            <td rowspan="2"> October 2015 (Fri) 14:00 - 22:00</td>
+            <td> October 2015 (Fri)</td>
+            <td>14:00 - 22:00</td>
         </tr>
     </tbody>
 </table>
