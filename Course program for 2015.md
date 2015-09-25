@@ -1,9 +1,5 @@
 # Course program for Databases 2015
-<<<<<<< .mine
 
-=======
-
->>>>>>> .theirs
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
