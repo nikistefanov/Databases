@@ -187,11 +187,14 @@
 		*	Homework comments are `not obligatory`
 		
 # Check Your Presence
-* Monday, Tuesday, Wednesday check your presence once between 17:30 and 18:30
-*	On Friday you should check your presence on the barcode reader `2-3 times a day`:
-	*	In the morning when lectures begin (~10:30)
-	*	After lunch break (~13:30)
-	*	When you have data structures and algorithms when the lecture starts (~18:00)
+* `Monday`, `Tuesday`, `Wednesday`
+  * Check your presence once
+    * between `17:30` and `18:30`
+*	On `Friday` 
+  * Check your presence `2-3` times a day:
+    *	`~10:30` - In the morning when lectures begin
+    *	`~13:30` - After lunch break
+    *	`~18:00` - Or when lecture ends
 
 <!-- section start -->
 <!-- attr: {id: 'resources', class: 'slide-section'} -->
