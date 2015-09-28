@@ -189,11 +189,11 @@
 # Check Your Presence
 * `Monday`, `Tuesday`, `Wednesday`
   * Check your presence once
-    * between `17:30` and `18:30`
-*	On `Friday` 
-  * Check your presence `2-3` times a day:
-    *	`~10:30` - In the morning when lectures begin
-    *	`~13:30` - After lunch break
+    * between `17:30` and `18:15`
+* On `Friday` lectures begin at `10:30`
+  * Check your presence `3` times a day:
+    *	between `10:00` and `10:45` - In the morning when lectures begin
+    *	`12:00-14:00` - After lunch break
     *	`~18:00` - Or when lecture ends
 
 <!-- section start -->
@@ -222,11 +222,11 @@
 # Required Software
 
 *	Software needed for this course:
-	*	Microsoft `Visual Studio 2012/2013`
-	*	Microsoft `SQL Server 2012` Developer with Service Pack 1 and Developer Tools
-		*	Or SQL Server 2014
-	*	MySQL Community Server 5.x
+	*	Microsoft `Visual Studio 2013/2015`
+	*	Microsoft `SQL Server 2014` Developer with Service Pack 1 and Developer Tools
+	*	`MySQL Community Server 5.x`
 		*	MySQL Workbench
+	*	`MongoDB` and `Redis`
 
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section'} -->
