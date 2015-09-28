@@ -260,7 +260,7 @@
     * Numbers, dates, strings, etc.
   * XSD Schemas have greater descriptive power than `DTD`
 
-<!-- attr: { hasScriptWrapper:false } -->
+<!-- attr: { hasScriptWrapper:true } -->
 # XSD Schemas – Example
 
 ```xml
@@ -279,7 +279,7 @@
     </xs:element> 
 ```
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:false } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # XSD Schemas – Example -->
 
 ```xml
