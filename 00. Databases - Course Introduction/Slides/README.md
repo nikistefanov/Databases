@@ -139,7 +139,7 @@
 	
 <!-- attr: {style: "font-size:40px", hasScriptWrapper: true} -->
 # The Trainers Team
-<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/revealjs-theme/css/imgs/kristian-tsuklev.jpg" style="float:right" height="240" />
+<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/revealjs-theme/css/imgs/kristiyan-tsaklev.jpg" style="float:right" height="240" />
 *   **Kristiyan Tsaklev**
 	*   Technical Trainer @ Telerik Academy
 	*   Champion in national and international
