@@ -384,7 +384,7 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # The DOM Parser -->
-* This document is represented in the in the memory as a DOM tree in the following way:
+* This document is represented in the memory as a DOM tree in the following way:
 <img class="slide-image" src="imgs/dom-parser.png" style="left:0%; top:28%" />
 
 # The SAX Parsers
