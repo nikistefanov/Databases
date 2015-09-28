@@ -222,11 +222,11 @@
 # Required Software
 
 *	Software needed for this course:
-	*	Microsoft `Visual Studio 2012/2013`
-	*	Microsoft `SQL Server 2012` Developer with Service Pack 1 and Developer Tools
-		*	Or SQL Server 2014
-	*	MySQL Community Server 5.x
+	*	Microsoft `Visual Studio 2013/2015`
+	*	Microsoft `SQL Server 2014` Developer with Service Pack 1 and Developer Tools
+	*	`MySQL Community Server 5.x`
 		*	MySQL Workbench
+	*	`MongoDB` and `Redis`
 
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section'} -->
