@@ -1,34 +1,35 @@
-# Databases – Practical Teamwork Project 2014
+# Databases 2015
+## Practical Teamwork Project
 
 * A factory of your choice holds information about its products in MongoDB database consisting of at least 3 tables.
 * For example you may have the following schema for beer factory:
 
-### Products
+#### Products
 
-|    ID    |    VendorID    |        Product Name       |    MeasureID    |    Base Price    |
-|----------|:--------------:|:-------------------------:|:---------------:|:----------------:|
-|    1     |    20          |    Beer “Zagorka”         |    100          |    0.86          |
-|    2     |    30          |    Vodka “Targovishte”    |    100          |    7.56          |
-|    3     |    20          |    Beer “Beck’s”          |    100          |    1.03          |
-|    4     |    10          |    Chocolate “Milka”      |    200          |    2.80          |
-|    …     |    …           |    …                      |    …            |    …             |
+| ID | VendorID |     Product Name    | MeasureID | Base Price |
+|----|----------|---------------------|-----------|------------|
+| 1  | 20       | Beer “Zagorka”      | 100       | 0.86       |
+| 2  | 30       | Vodka “Targovishte” | 100       | 7.56       |
+| 3  | 20       | Beer “Beck’s”       | 100       | 1.03       |
+| 4  | 10       | Chocolate “Milka”   | 200       | 2.80       |
+| …  | …        | …                   | …         | …          |
 
-### Vendors
+#### Vendors
 
-|    ID    |                Vendor Name                |
-|----------|:-----------------------------------------:|
-|    10    |    Nestle Sofia Corp.                     |
-|    20    |    Zagorka Corp.                          |
-|    30    |    Targovishte Bottling Company   Ltd.    |
-|    …     |    …                                      |
+| ID |             Vendor Name             |
+|----|-------------------------------------|
+| 10 | Nestle Sofia Corp.                  |
+| 20 | Zagorka Corp.                       |
+| 30 | Targovishte Bottling Company   Ltd. |
+| …  | …                                   |
 
-### Measures
+#### Measures
 
-|    ID     |    Measure Name    |
-|-----------|:------------------:|
-|    100    |    liters          |
-|    200    |    pieces          |
-|    …      |    …               |
+| ID  | Measure Name |
+|-----|--------------|
+| 100 | liters       |
+| 200 | pieces       |
+| …   | …            |
 
 * Do not use the provided example but think of another case. Create your tables with at least 4 columns and try to be creative (it will be part of your final score). For testing purposes please fill between 10 and 50 records in each table. Try to use real-world data. You may use sequential IDs for the primary key or any other primary key notation.
 
@@ -39,16 +40,20 @@
 
 * All reports should be different from each other and are by your choice. They can be sales reports, taxes reports, vendor reports, etc. Try to use real-world example.
 
-### Problem #1 – Load Excel Reports from ZIP File
+### Problem #1
+## Load Excel Reports from ZIP File
 * Your task is to write a C# program to **load Excel in MS SQL Server**. You may need to preliminary design a database schema to hold all data about the products (data from the MongoDB database and data from the Excel files) or use the "code-first" approach to move the DB schema from MongoDB to SQL Server. Your C# program should also move the products data from MongoDB to SQL Server.
-* The Excel files are given inside a **ZIP archive** holding subfolders named as the dates of the report in format **dd-MMM-yyyy** (see the example reports archive [Sample-Sales-Reports](/Sample-Sales-Reports.zip)).
+* The Excel files are given inside a **ZIP archive** holding subfolders named as the dates of the report in format **dd-MMM-yyyy** (see the example reports archive [Sample-Sales-Reports.zip](/21.%20Databases%20Team%20Work%20Project/2015/Sample-Sales-Reports.zip?raw=true)).
 * Note that the ZIP file could contain few hundred dates (folders), each holding few hundreds Excel files, each holding thousands of data.
 * **Input**: MongoDB database; ZIP file with Excel 2003 reports. Output: data loaded in the SQL Server database.
-* For example you may have the **MongoDB database “Supermarket”** holding information about some vendors and some products and a **set of Excel files** (*.xls) holding information about the sales in the different super¬markets.
+* _For example:_
+  * you may have the **MongoDB database “Supermarket”** holding information about some vendors and some products and a **set of Excel files** (*.xls) holding information about the sales in the different super¬markets.
 
-### Problem #2 – Generate PDF Reports
+### Problem #2
+## Generate PDF Reports
 * Your task is to generate a PDF reports summarizing information from the SQL Server.
-* For example the PDF report may contain a table like the sample below:
+* _For example:_
+  * the PDF report may contain a table like the sample below:
 
 <table>
     <tr>
@@ -86,7 +91,8 @@
         <td align="right">19.95</td>
     </tr>
     <tr>
-        <td>Vodka "Targovishte"	14 liters</td>
+        <td>Vodka "Targovishte"</td>
+        <td>14 liters</td>
         <td>8.50</td>
         <td>Supermarket "Bourgas – Plaza"</td>
         <td align="right">119.00</td>
@@ -295,13 +301,14 @@
     </tr>
 </table>
 
-* A sample PDF report is also available: [Sample-Aggregated-Sales-Report.pdf](/Sample-Aggregated-Sales-Report.pdf).
+* A sample PDF report is also available: [Sample-Aggregated-Sales-Report.pdf](21.%20Databases%20Team%20Work%20Project/2015/Sample-Aggregated-Sales-Report.pdf).
 * **Input**:
-  * SQL Server database.
+  * SQL Server database
 * **Output**:
-  * PDF report.
+  * PDF report
 
-### Problem #3 – Generate XML Report
+### Problem #3
+## Generate XML Report
 * Your task is to create a C# program to **generate report in XML format** like the sample below:
 
 **Sales-by-Vendors-report.xml** 
@@ -328,16 +335,17 @@
 
 * Save the report in an “**xml**” file.
 * **Input**:
-  * SQL Server database.
+  * SQL Server database
 * **Output**:
   * XML report
 
-### Problem #4 – JSON Reports
+### Problem #4
+## JSON Reports
 * Your task is to write a program to create report for each product in JSON format and save all reports in MySQL. All reports may look like the sample below and should be saved in the MySQL database as well as in the file system (in a folder called “Json-Reports”, in files named “XX.json” where XX is the ID).
 * Sample product report in JSON format:
 
 **3.json**
-```javascript{
+```javascript
 {
   "product-id" : 3,
   "product-name" : "Beer “Beck’s”",
@@ -345,7 +353,9 @@
   "total-quantity-sold" : 236,
   "total-incomes" : 262.95,
 }
-1.json
+```
+**1.json**
+```javascript
 {
   "product-id" : 1,
   "product-name" : "Beer “Zagorka”",
@@ -353,7 +363,9 @@
   "total-quantity-sold" : 673,
   "total-incomes" : 609.24,
 }
-4.json
+```
+**4.json**
+```javascript
 {
   "product-id" : 4,
   "product-name" : "Chocolate “Milka”",
@@ -361,7 +373,9 @@
   "total-quantity-sold" : 47,
   "total-incomes" : 135.70,
 }
-2.json
+```
+**2.json**
+```javascript
 {
   "product-id" : 2,
   "product-name" : "Vodka “Targovishte”",
@@ -372,13 +386,15 @@
 ```
 
 * **Input**:
-  * SQL Server database.
+  * SQL Server database
 * **Output**:
   * a set of JSON files
-  * data loaded in MySQL database.
+  * data loaded in MySQL database
 
-### Problem #5 – Load data from XML
-* You must create **XML** file holding additional information by your choice. For example:
+### Problem #5
+## Load data from XML
+* You must create **XML** file holding additional information by your choice.
+* _For example:_
 
 **Vendors-Expenses.xml**
 ```xml
@@ -401,13 +417,15 @@
 
 * Your task is to **read the XML file**, parse it and **save the data** in the ***MongoDB** database and in the **SQL Server**. Please think how your database schema / document model will support the additional data.
 * **Input**:
-  * XML file.
+  * XML file
 * **Output**:
   * data loaded in the SQL Server
   * data loaded in the MongoDB
 
-### Problem #6 – Excel data
-* You are given a **SQLite database** holding more information for each product. For example:
+### Problem #6
+## Excel data
+* You are given a **SQLite database** holding more information for each product.
+* _For example:_
 
 |    Product Name           |    Tax    |
 |---------------------------|:---------:|
@@ -416,7 +434,8 @@
 |    Chocolate   “Milka”    |    18%    |
 |    Vodka “Targovishte”    |    25%    |
 
-* Write a program to **read the MySQL database** of reports, **read the information from SQLite** and generate a **single Excel 2007** file holding some information by your choice. For example:
+* Write a program to **read the MySQL database** of reports, **read the information from SQLite** and generate a **single Excel 2007** file holding some information by your choice.
+* _For example:_
 
 |    Vendor                               |    Incomes    |    Expenses    |    Taxes     |    Financial Result    |
 |-----------------------------------------|:-------------:|----------------|--------------|------------------------|
@@ -429,9 +448,9 @@
   * SQLite database
   * MySQL database
 * **Output**:
-  * Excel 2007 file (.xlsx).
+  * Excel 2007 file (.xlsx)
 
-### Additional Requirements
+## Additional Requirements
 *	Your main program logic should be a C# application (a set of modules, executed sequentially one after another).
 *	Use non-commercial library to read the ZIP file.
 *	For reading the Excel 2003 files (.xls) use ADO.NET (without ORM or third-party libraries).

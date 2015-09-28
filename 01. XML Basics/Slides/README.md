@@ -36,7 +36,8 @@
 * XML looks like HTML
   * Text based language, uses tags and attributes
 
-# What is XML
+<!-- attr: { showInPresentation:true } -->
+<!-- # What is XML -->
 * Worldwide standard
   * supported by the W3C - [www.w3c.org](http://www.w3.org/)
 * Independent of
@@ -63,15 +64,15 @@
 </library>
 ```
 
-<div class="fragment">
-  <div class="balloon" style="left:10%; top:11%">XML header tag (prolog)</div>
-  <div class="balloon" style="left:50%; top:15%">Attribute (key / value pair)</div>
-  <div class="balloon" style="width:120px; left:-9%; top:22%">Root (document) element</div>
-  <div class="balloon" style="left:18%; top:45%">Opening tag</div>
-  <div class="balloon" style="left:56%; top:38%">Element</div>
-  <div class="balloon" style="left:20%; top:62%">Closing tag</div>
-  <div class="balloon" style="left:43%; top:62%">Element value</div>
-</div>
+<ul class="fragment">
+  <li class="balloon" style="left:10%; top:11%">XML header tag (prolog)</li>
+  <li class="balloon" style="left:50%; top:15%">Attribute (key / value pair)</li>
+  <li class="balloon" style="width:120px; left:-9%; top:22%">Root (document) element</li>
+  <li class="balloon" style="left:18%; top:45%">Opening tag</li>
+  <li class="balloon" style="left:56%; top:38%">Element</li>
+  <li class="balloon" style="left:20%; top:62%">Closing tag</li>
+  <li class="balloon" style="left:43%; top:62%">Element value</li>
+</ul>
 
 <!-- section start -->
 <!-- attr: {id: 'xml-and-html', class: 'slide-section', showInPresentation:true} -->
