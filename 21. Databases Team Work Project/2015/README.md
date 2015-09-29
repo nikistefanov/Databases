@@ -40,8 +40,7 @@
 
 * All reports should be different from each other and are by your choice. They can be sales reports, taxes reports, vendor reports, etc. Try to use real-world example.
 
-### Problem #1
-## Load Excel Reports from ZIP File
+## Problem 1 - Load Excel Reports from ZIP File
 * Your task is to write a C# program to **load Excel in MS SQL Server**. You may need to preliminary design a database schema to hold all data about the products (data from the MongoDB database and data from the Excel files) or use the "code-first" approach to move the DB schema from MongoDB to SQL Server. Your C# program should also move the products data from MongoDB to SQL Server.
 * The Excel files are given inside a **ZIP archive** holding subfolders named as the dates of the report in format **dd-MMM-yyyy** (see the example reports archive [Sample-Sales-Reports.zip](/21.%20Databases%20Team%20Work%20Project/2015/Sample-Sales-Reports.zip?raw=true)).
 * Note that the ZIP file could contain few hundred dates (folders), each holding few hundreds Excel files, each holding thousands of data.
@@ -49,8 +48,7 @@
 * _For example:_
   * you may have the **MongoDB database “Supermarket”** holding information about some vendors and some products and a **set of Excel files** (*.xls) holding information about the sales in the different super¬markets.
 
-### Problem #2
-## Generate PDF Reports
+## Problem 2 - Generate PDF Reports
 * Your task is to generate a PDF reports summarizing information from the SQL Server.
 * _For example:_
   * the PDF report may contain a table like the sample below:
@@ -301,14 +299,13 @@
     </tr>
 </table>
 
-* A sample PDF report is also available: [Sample-Aggregated-Sales-Report.pdf](21.%20Databases%20Team%20Work%20Project/2015/Sample-Aggregated-Sales-Report.pdf).
+* A sample PDF report is also available: [Sample-Aggregated-Sales-Report.pdf](Sample-Aggregated-Sales-Report.pdf).
 * **Input**:
   * SQL Server database
 * **Output**:
   * PDF report
 
-### Problem #3
-## Generate XML Report
+## Problem 3 - Generate XML Report
 * Your task is to create a C# program to **generate report in XML format** like the sample below:
 
 **Sales-by-Vendors-report.xml** 
@@ -339,8 +336,7 @@
 * **Output**:
   * XML report
 
-### Problem #4
-## JSON Reports
+## Problem 4 - JSON Reports
 * Your task is to write a program to create report for each product in JSON format and save all reports in MySQL. All reports may look like the sample below and should be saved in the MySQL database as well as in the file system (in a folder called “Json-Reports”, in files named “XX.json” where XX is the ID).
 * Sample product report in JSON format:
 
@@ -391,8 +387,7 @@
   * a set of JSON files
   * data loaded in MySQL database
 
-### Problem #5
-## Load data from XML
+## Problem 5 - Load data from XML
 * You must create **XML** file holding additional information by your choice.
 * _For example:_
 
@@ -422,8 +417,7 @@
   * data loaded in the SQL Server
   * data loaded in the MongoDB
 
-### Problem #6
-## Excel data
+## Problem 6 - Excel data
 * You are given a **SQLite database** holding more information for each product.
 * _For example:_
 
