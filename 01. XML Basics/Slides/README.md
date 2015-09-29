@@ -260,42 +260,42 @@
     * Numbers, dates, strings, etc.
   * XSD Schemas have greater descriptive power than `DTD`
 
-<!-- attr: { hasScriptWrapper:false } -->
+<!-- attr: { hasScriptWrapper:true } -->
 # XSD Schemas – Example
 
 ```xml
-&lt;?xml version="1.0" encoding="UTF-8"?>
-&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="https://telerikacademy.com">
-    &lt;xs:element name="library">
-        &lt;xs:complexType>
-            &lt;xs:sequence>
-                &lt;xs:element ref="book"
+    <xs:element name="library">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="book"
                     maxOccurs="unbounded"/>
-            &lt;/xs:sequence>
-            &lt;xs:attribute name="name"
+            </xs:sequence>
+            <xs:attribute name="name"
                 type="xs:string" use="optional"/>
-        &lt;/xs:complexType>
-    &lt;/xs:element> 
+        </xs:complexType>
+    </xs:element> 
 ```
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:false } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # XSD Schemas – Example -->
 
 ```xml
-    &lt;xs:element name="book">
-        &lt;xs:complexType>
-            &lt;xs:sequence>
-                &lt;xs:element ref="title"/>
-                &lt;xs:element ref="author"/>
-                &lt;xs:element ref="isbn"/>
-            &lt;/xs:sequence>
-        &lt;/xs:complexType>
-    &lt;/xs:element>
-    &lt;xs:element name="title" type="xs:string"/>
-    &lt;xs:element name="author" type="xs:string"/>
-    &lt;xs:element name="isbn" type="xs:string"/>
-&lt;/xs:schema>
+    <xs:element name="book">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title"/>
+                <xs:element ref="author"/>
+                <xs:element ref="isbn"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="author" type="xs:string"/>
+    <xs:element name="isbn" type="xs:string"/>
+</xs:schema>
 ```
 
 <!-- attr: { hasScriptWrapper:true, style:'font-size:0.9em' } -->
@@ -385,7 +385,7 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # The DOM Parser -->
-* This document is represented in the in the memory as a DOM tree in the following way:
+* This document is represented in the memory as a DOM tree in the following way:
 <img class="slide-image" src="imgs/dom-parser.png" style="left:0%; top:28%" />
 
 # The SAX Parsers
