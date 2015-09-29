@@ -130,7 +130,7 @@
             <td>22</td>
             <td>Exam</td>
             <td> October 2015 (Fri)</td>
-            <td>14:00 - 22:00</td>
+            <td></td>
         </tr>
     </tbody>
 </table>
