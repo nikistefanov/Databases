@@ -299,7 +299,7 @@
     </tr>
 </table>
 
-* A sample PDF report is also available: [Sample-Aggregated-Sales-Report.pdf](21.%20Databases%20Team%20Work%20Project/2015/Sample-Aggregated-Sales-Report.pdf).
+* A sample PDF report is also available: [Sample-Aggregated-Sales-Report.pdf](Sample-Aggregated-Sales-Report.pdf).
 * **Input**:
   * SQL Server database
 * **Output**:
