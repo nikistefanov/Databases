@@ -36,7 +36,8 @@
 * XML looks like HTML
   * Text based language, uses tags and attributes
 
-# What is XML
+<!-- attr: { showInPresentation:true } -->
+<!-- # What is XML -->
 * Worldwide standard
   * supported by the W3C - [www.w3c.org](http://www.w3.org/)
 * Independent of
@@ -63,15 +64,15 @@
 </library>
 ```
 
-<div class="fragment">
-  <div class="balloon" style="left:10%; top:11%">XML header tag (prolog)</div>
-  <div class="balloon" style="left:50%; top:15%">Attribute (key / value pair)</div>
-  <div class="balloon" style="width:120px; left:-9%; top:22%">Root (document) element</div>
-  <div class="balloon" style="left:18%; top:45%">Opening tag</div>
-  <div class="balloon" style="left:56%; top:38%">Element</div>
-  <div class="balloon" style="left:20%; top:62%">Closing tag</div>
-  <div class="balloon" style="left:43%; top:62%">Element value</div>
-</div>
+<ul class="fragment">
+  <li class="balloon" style="left:10%; top:11%">XML header tag (prolog)</li>
+  <li class="balloon" style="left:50%; top:15%">Attribute (key / value pair)</li>
+  <li class="balloon" style="width:120px; left:-9%; top:22%">Root (document) element</li>
+  <li class="balloon" style="left:18%; top:45%">Opening tag</li>
+  <li class="balloon" style="left:56%; top:38%">Element</li>
+  <li class="balloon" style="left:20%; top:62%">Closing tag</li>
+  <li class="balloon" style="left:43%; top:62%">Element value</li>
+</ul>
 
 <!-- section start -->
 <!-- attr: {id: 'xml-and-html', class: 'slide-section', showInPresentation:true} -->
@@ -259,42 +260,42 @@
     * Numbers, dates, strings, etc.
   * XSD Schemas have greater descriptive power than `DTD`
 
-<!-- attr: { hasScriptWrapper:false } -->
+<!-- attr: { hasScriptWrapper:true } -->
 # XSD Schemas – Example
 
 ```xml
-&lt;?xml version="1.0" encoding="UTF-8"?>
-&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="https://telerikacademy.com">
-    &lt;xs:element name="library">
-        &lt;xs:complexType>
-            &lt;xs:sequence>
-                &lt;xs:element ref="book"
+    <xs:element name="library">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="book"
                     maxOccurs="unbounded"/>
-            &lt;/xs:sequence>
-            &lt;xs:attribute name="name"
+            </xs:sequence>
+            <xs:attribute name="name"
                 type="xs:string" use="optional"/>
-        &lt;/xs:complexType>
-    &lt;/xs:element> 
+        </xs:complexType>
+    </xs:element> 
 ```
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:false } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # XSD Schemas – Example -->
 
 ```xml
-    &lt;xs:element name="book">
-        &lt;xs:complexType>
-            &lt;xs:sequence>
-                &lt;xs:element ref="title"/>
-                &lt;xs:element ref="author"/>
-                &lt;xs:element ref="isbn"/>
-            &lt;/xs:sequence>
-        &lt;/xs:complexType>
-    &lt;/xs:element>
-    &lt;xs:element name="title" type="xs:string"/>
-    &lt;xs:element name="author" type="xs:string"/>
-    &lt;xs:element name="isbn" type="xs:string"/>
-&lt;/xs:schema>
+    <xs:element name="book">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title"/>
+                <xs:element ref="author"/>
+                <xs:element ref="isbn"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="author" type="xs:string"/>
+    <xs:element name="isbn" type="xs:string"/>
+</xs:schema>
 ```
 
 <!-- attr: { hasScriptWrapper:true, style:'font-size:0.9em' } -->
@@ -384,7 +385,7 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 <!-- # The DOM Parser -->
-* This document is represented in the in the memory as a DOM tree in the following way:
+* This document is represented in the memory as a DOM tree in the following way:
 <img class="slide-image" src="imgs/dom-parser.png" style="left:0%; top:28%" />
 
 # The SAX Parsers
