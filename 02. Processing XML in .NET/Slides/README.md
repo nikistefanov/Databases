@@ -16,9 +16,9 @@
 * Processing XML documents in .NET
   * [Using the DOM Parser](#the-dom-parser)
   * [Using the Streaming Parser](#sax-and-stax-parsers)
-* [Using XPath to Search in XML Documents](#)
-* [Using LINQ-To-XML](#)
-* [XSL Transformation in .NET](#)
+* [Using XPath to Search in XML Documents](#using-xpath-in-net)
+* [Using LINQ-To-XML](#linq-to-xml)
+* [XSL Transformation in .NET](#xsl-transformations)
 
 <!-- section start -->
 <!-- attr: {id: 'the-dom-parser', class: 'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
@@ -154,7 +154,7 @@ foreach (XmlNode node in rootNode.ChildNodes)
   * `CreateElement(…)`, `CreateAttribute(…)`, `CreateTextNode(…)` – creates new XML element, attribute or value for the element
   * `NodeChanged`, `NodeInserted`, `NodeRemoved` – events for tracking the changes in the document
 
-<!-- attr: { showInPresentation:true } -->
+<!-- attr: { class:'slide-section', showInPresentation:true } -->
 <!-- # Modifying XML Document Using the DOM Parser -->
 ## Demo
 
@@ -203,34 +203,232 @@ using (XmlReader reader = XmlReader.Create("items.xml"))
 }
 ```
 
-<!-- attr: { showInPresentation:true } -->
+<!-- attr: { class:'slide-section table-of-contents', showInPresentation:true } -->
 <!-- # Working with XmlReader -->
-## Demo
+## [Demo]()
 
+<!-- attr: { hasScriptWrapper:true } -->
+# Working with XmlWriter
+* The class `XmlWriter` creates XML documents
+  * Works as a stream, but writes tags and data into XML documents
+* Most important methods:
+  * `WriteStartDocument()` – adds the prolog part in the beginning of the document (`<?xml …`)
+  * `WriteStartElement(…)` – adds opening tag
+  * `WriteEndElement()` – closes the last tag
+  * `WriteElementString(…)` – adds an element by defined name and text value
 
+<!-- attr: { showInPresentation:true } -->
+<!-- # Working with XmlWriter -->
+* * `WriteAttributeString(…)` – adds an attribute to the current element
+  * `WriteEndDocument()` – closes all tags and flushes the internal buffer (by calling Flush())
+* `XmlWriter` is an abstract class
+  * Instantiated by that static method Create(…)
+  * Implements `IDisposable`
+  
+```cs
+using (var writer = new XmlTextWriter ("items.xml"))
+{
+  // Write nodes here
+}
+```
 
-
-
-
-
-
-
-
+<!-- attr: { class:'slide-section table-of-contents', showInPresentation:true } -->
+<!-- # Working with XmlWriter -->
+## [Demo]()
 
 <!-- section start -->
-<!-- attr: {id: '', class: 'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # 
-##  -->
+<!-- attr: {id: 'using-xpath-in-net', class: 'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Using XPath -->
+
+<!-- attr: { style:'font-size:0.95em' } -->
+# Using XPath in .NET
+* XPath functionality is implemented in the `System.Xml.XPath` namespace
+* XPath can be used directly from the class `XmlNode` (and all its inheritors) :
+  * `SelectNodes(string xPathExpression)`
+    * Returns list of all nodes matched by the specified XPath expression
+  * `SelectSingleNode(string xPathExpression)`
+    * Returns the first node matched by the specified XPath expression
+
+<!-- attr: { hasScriptWrapper:true } -->
+# XPath and XmlNode – Example
+* Suppose we want to find the beer's nodes
+
+```xml
+<?xml version="1.0" encoding="windows-1251"?>
+<items>
+  <item type="beer">
+    <name>Zagorka</name>
+    <price>0.75</price>
+  </item>
+  <item type="food">
+    <name>sausages</name>
+    <price>0.48</price>
+  </item>
+  <item type="beer">
+    <name>Kamenitza</name>
+    <price>0.65</price>
+  </item>
+</items>
+```
+
+<!-- attr: { showInPresentation:true } -->
+<!-- # XPath and XmlNode – Example -->
+
+```cs
+static void Main()
+{
+  XmlDocument xmlDoc = new XmlDocument();
+  xmlDoc.Load("../../items.xml");
+  string xPathQuery = "/items/item[@type='beer']";
+        
+  XmlNodeList beersList =
+    xmlDoc.SelectNodes(xPathQuery);
+  foreach (XmlNode beerNode in beersList)
+  {
+    string beerName =
+      beerNode.SelectSingleNode("name");
+    Console.WriteLine(beerName.InnerText);
+  }
+}
+```
+
+<!-- attr: { class:'slide-section table-of-contents', showInPresentation:true } -->
+<!-- # Searching with XPath in XML Documents -->
+## [Demo]()
 
 <!-- section start -->
-<!-- attr: {id: '', class: 'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # 
-##  -->
+<!-- attr: {id: 'linq-to-xml', class: 'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # LINQ to XML -->
+
+# LINQ to XML
+* `LINQ to XML`
+  * Use the power of LINQ to process XML data
+  * Easily read, write, modify, and search in XML documents
+* Elements and attributes are no longer built-in the context of their parents
+* LINQ to XML classes:
+  * `XDocument` – represents a LINQ-enabled XML document (containing prolog, root element, …)
+
+# LINQ to XML Classes
+* LINQ to XML classes:
+  * `XElement` – represents an XML element
+    * The most fundamental class in LINQ to XML
+    * Important methods: `Parse`, `Save`, `RemoveAtributes`, `SetElementValue`, `SetAtributeValue`, `WriteTo`
+  * `XAttribute` – name/  value attribute pair
+  * `XName` – tag name + optional namespace – `{namespace}localname` 
+  * `XNamespace` – XML namespace
+
+<!-- attr: { hasScriptWrapper:true } -->
+# LINQ to XML – How Easy It Is!
+
+```xml
+<books>
+    <book>
+       <author>Don Box</author>
+       <title>Essential .NET</title>
+   </book>
+</book>
+```
+
+* Need to create this XML fragment?
+
+```cs
+XElement books = 
+  new XElement("books",
+    new XElement("book",
+      new XElement("author", "Don Box"),
+      new XElement("title", "ASP.NET")
+    )
+ );
+```
+
+<!-- attr: { class:'slide-section table-of-contents', showInPresentation:true } -->
+<!-- # Creating Document with LINQ To XML -->
+## [Demo]()
+
+# LINQ to XML and Namespaces
+* Elements in LINQ to XML have fully expanded names (namespace + name)
+  * Easy to manipulate the elements in different namespaces
+
+```cs
+XNamespace ns = "http://linqinaction.net";
+XNamespace anotherNS = "http://publishers.org";
+XElement book = new XElement(ns + "book",
+    new XElement(ns + "title", "LINQ in Action"),
+    new XElement(ns + "author", "Manning"),
+    new XElement(ns + "author", "Steve Eichert"),
+    new XElement(ns + "author", "Jim Wooley"),
+    new XElement(anotherNS + "publisher", "Manning")
+);
+```
+
+<!-- attr: { class:'slide-section table-of-contents', showInPresentation:true } -->
+<!-- # LINQ to XML and Namespaces -->
+## [Demo]()
+
+# LINQ to XML – Searching with LINQ
+* Searching in XML with LINQ is as easy as searching within an array
+
+```cs
+XDocument xmlDoc = XDocument.Load("../../books.xml");
+var books =
+  from book in xmlDoc.Descendants("book")
+  where book.Element("title").Value.Contains("4.0")
+  select new {
+    Title = book.Element("title").Value,
+    Author = book.Element("author").Value };
+foreach (var book in books)
+{
+    Console.WriteLine(book);
+}
+```
+
+<!-- attr: { class:'slide-section table-of-contents', showInPresentation:true } -->
+<!-- # LINQ to XML and Namespaces -->
+## [Demo]()
 
 <!-- section start -->
-<!-- attr: {id: '', class: 'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-<!-- # 
-##  -->
+<!-- attr: {id: 'xsl-transformations', class: 'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # XSL Transformations -->
+
+# XSL Transformations
+* XSL transformations (XSLT)
+  * Convert a XML document to another XML document with different structure
+  * Can convert XML to any text format
+  * Can be used to transform XML documents to XHTML
+* XSLT depends on XPath
+  * For matching sections from the input document and replacing them with other text
+
+# Performing XSLT in .NET
+* .NET has built-in XSLT engine
+  * System.Xml.Xsl.XslCompiledTransform
+* Methods:
+  * `Load(…)`
+    * Loads XSL shylesheet for transforming XML docs
+  * `Transform(…)`
+    * Performs transformation of given XML
+    * Output is written to a XML file, stream or `XmlWriter`
+
+# XSL Transformation – Example
+* Transforming XML document by given XSL stylesheet:
+
+```cs
+using System;
+using System.Xml.Xsl;
+
+class XSLTransformDemo
+{
+  static void Main()
+  {
+    XslCompiledTransform xslt = new XslCompiledTransform();
+    xslt.Load("catalog.xsl");
+    xslt.Transform("catalog.xml", "catalog.html");
+  }
+}
+```
+
+<!-- attr: { class:'slide-section table-of-contents', showInPresentation:true } -->
+<!-- # Transforming XML by XSL Stylesheet -->
+## [Demo]()
 
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section'} -->
