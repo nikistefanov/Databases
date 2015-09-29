@@ -129,7 +129,7 @@
         <tr>
             <td>22</td>
             <td>Exam</td>
-            <td> October 2015 (Fri)</td>
+            <td>23 October 2015 (Fri)</td>
             <td></td>
         </tr>
     </tbody>
