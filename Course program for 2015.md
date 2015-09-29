@@ -123,7 +123,7 @@
         <tr>
             <td>21</td>
             <td>Teamwork Defence</td>
-            <td>20 October 2015 (Wed)</td>
+            <td>20 October 2015 (Tue)</td>
             <td>10:00 - 20:00</td>
         </tr>
         <tr>
