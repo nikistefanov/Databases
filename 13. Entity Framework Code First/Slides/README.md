@@ -13,8 +13,8 @@
 <!-- attr: {id: 'table-of-contents', class:'table-of-contents'} -->
 # Table of Contents
 *   [Modeling Workflow](#modeling-workflow)
-*   [Code First Main Parts](#domain-classes-models)
-    *   [Domain Classes - Models](#domain-classes-models)
+*   [Code First Main Parts](#domain-classes---models)
+    *   [Domain Classes - Models](#domain-classes---models)
     *   [DbContext and DbSets](#dbcontext-class)
     *   [Database connection](#where-is-my-data)
 *   [Using Code First Migrations](#code-first-migrations)
@@ -60,7 +60,7 @@ Domain classes
 *   Can use Data Annotations (`Key`, `Required`, etc.)
 
 <!-- section start -->
-<!-- attr: {id: 'domain-classes-models', class: 'slide-section', showInPresentation:true} -->
+<!-- attr: {id: 'domain-classes---models', class: 'slide-section', showInPresentation:true} -->
 <!-- # Code First Main Parts
 ## Domain classes, DbContext and DbSets -->
 

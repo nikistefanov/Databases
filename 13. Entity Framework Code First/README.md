@@ -2,8 +2,8 @@
 ### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html)
 ### Table of Contents
 * Modeling Workflow - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/modeling-workflow)
-* Code First Main Parts - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/domain-classes-models)
-  * Domain Classes - Models - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/domain-classes-models)
+* Code First Main Parts - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/domain-classes---models)
+  * Domain Classes - Models - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/domain-classes---models)
   * DbContext and DbSets - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/dbcontext-class)
   * Database connection - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/where-is-my-data)
 * Using Code First Migrations - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/code-first-migrations)
