@@ -10,7 +10,7 @@ class CreatingDocumentLINQToXML
                 new XElement("title", "ASP.NET")
             ),
             new XElement("book",
-                new XElement("author", "Svetlin Nakov and his team"),
+                new XElement("author", "Jason and his team"),
                 new XElement("title", "Introduction to Programming with C#")
             )
         );
