@@ -1,4 +1,4 @@
-## 01. Database Systems - Overview
+## Database Systems - Overview
 ### _Homework_
 
 1.  What database models do you know?

@@ -1,4 +1,4 @@
-## 05. Database Modelling
+## Database Modelling
 ### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/05.%20Database%20Modeling/Slides/index.html)
 ### Table of Contents
 *   Data Modelling – Principles - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/05.%20Database%20Modeling/Slides/index.html#/data-modelling)
