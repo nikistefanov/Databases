@@ -231,4 +231,4 @@
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section'} -->
 # Questions
-## Databses - Course introduction
+## Databases - Course introduction
