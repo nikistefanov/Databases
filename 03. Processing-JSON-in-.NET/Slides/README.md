@@ -36,9 +36,10 @@
     *   Based on the way to create objects in JS
     *   Platform independent - can be used with any programming language
 
+<!-- attr: {style: 'font-size:40px'} -->
 #   JSON Rules
 
-*   The JSON data format follows the rules of object creation in JavaScript
+*   The JSON format follows  the rules of object literals in JS
 
 *   **Strings**, **numbers** and **Booleans** are valid JSON
 
@@ -63,6 +64,8 @@
 
 ```
 
+<!-- section start -->
+
 <!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   Processing JSON in .NET
 ##   How to parse JSON in .NET? -->
@@ -73,7 +76,7 @@
     *   The `JavaScriptSerializer` class, contained in `System.Web.Extensions` assembly
 *   `JavaScriptSerializer` has parsing from object to JSON string and vice versa:
 
-```javascript
+```cs
 var place = new Place(…);
 var serializer = new JavaScriptSerializer();
 
@@ -83,38 +86,6 @@ var objPlace = serializer.Deserialize<Place>(jsonPlace);
 
 <!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   Simple Parsing with JavaScript Serializer -->
-##   Demo
-
-<!-- attr: {hasScriptWrapper: true} -->
-#   JavaScriptSerializer Features
-
-*   JavaScript serializer has nice features:
-    *   Serializing objects to JSON and vice versa
-    *   Correct parsing of dictionaries:
-
-```cs
-digits = new Dictionary<string, int>
-  {
-    { "one", 1},
-    { "two", 2}, 
-    …
-  };
-```
-
-is parsed to
-
-```javascript
-{ 
-  "one": 1, "two": 2,
-  "three": 3,
-  "four": 4,
-…
-}
-
-```
-
-<!-- attr: {class: 'slide-section', showInPresentation: true} -->
-<!-- #   JavaScript Serializer Features -->
 ##   Demo
 
 <!-- section start -->
@@ -127,10 +98,10 @@ is parsed to
 
 *   JSON.NET is a library for parsing JSON in .NET
     *   Has better performance than the `JavaScriptSerializer`
-    *   Provides LINQ-to-JSON
+    *   Provides **LINQ-to-JSON**
     *   Has an out-of-the-box support for parsing between JSON and XML
 
-
+<!-- attr: {hasScriptWrapper: true} -->
 #   Installing JSON.NET
 
 *   To install JSON.NET run in the Package Manager Console:
@@ -140,16 +111,17 @@ $ Install-Package Newtonsoft.Json
 ```
 
 *   JSON.NET has two primary methods:
-  *   Serialize an object:
+    *   Serialize an object:
 
-```cs
-var serializedPlace = JsonConvert.SerializeObject(place);
-```
+    ```cs
+    var jsonObj = JsonConvert.SerializeObject(obj);
+    ```
 
-Deserialize an object:
-```cs
-var deserializedPlace = JsonConvert.DeserializeObject<Place>(serializedPlace);
-```
+    *   Deserialize an object:
+    
+    ```cs
+    var copy = JsonConvert.DeserializeObject<ObjType>(jsonObj);
+    ```
 
 <!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   Serializing and Deserializing Objects with JSON.NET -->
@@ -166,6 +138,7 @@ var deserializedPlace = JsonConvert.DeserializeObject<Place>(serializedPlace);
     *   **LINQ-to-JSON**
     *   Direct parse between XML and JSON
 
+<!-- attr: {style: "font-size:40px"} -->
 #   Configuring JSON.NET
 
 *   To indent the output string use `Formattingg.Indented`:
@@ -178,28 +151,23 @@ JsonConvert.SerializeObject(place, Formatting.Indented);
 
 ```cs
 var json = @"{ 
-               'firstName': 'Doncho',
-               'lastName': 'Minkov',
-               'occupation': 'Technical Trainer' 
+               ""fname"": ""Doncho"",
+               ""lname"": ""Minkov"",
+               ""occupation"": ""Technical Trainer"" 
              }";
 
 var template = new 
-{
-  FirstName = "",
-  Lastname = "",
-  Occupation = ""
-};
+{ FName  = "", LName = "", Occupation = "" };
 var person = JsonConvert.DeserializeAnonymousType(json, template);
 ```
 
-*   Should provide a template Object
-
+*   Must provide a template Object 
 
 <!-- attr: {class: 'slide-section', showInPresentation: true} -->
 <!-- #   Configuring JSON.NET -->
 ##   Demo
 
-
+<!-- attr: {style: "font-size:40px"} -->
 #   JSON.NET Parsing of Objects
 *   By default JSON.NET takes **each Property/Field** from the **public interface** of a class and parses it
     *   This can be controlled using attributes:
@@ -269,6 +237,7 @@ string jsonFromXml = JsonConvert.SerializeXNode(doc);
 ```
 
   *   JSON to XML
+
 ```cs
 XDocument xmlFromJson = JsonConvert.DeserializeXNode(json);
 ```
@@ -280,7 +249,6 @@ XDocument xmlFromJson = JsonConvert.DeserializeXNode(json);
 
 <!-- section start -->
 
-<!-- attr: {id: 'questions', class: 'slide-section'} -->
-# Questions
-<!-- attr: {showInPresentation: true} -->
-<!-- ## JSON in .NET -->
+<!-- attr: {id: 'questions', class: 'slide-questions', showInPresentation: true} -->
+# JSON in .NET
+## Questions
