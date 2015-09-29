@@ -219,7 +219,7 @@
   </item>
 </order>
 ```
-<div class="fragmentz balloon" style="width:400px; left:54%; top:27%">Namespace with prefix "country" and URI "urn:academy-com:country"</div>
+<div class="fragmentz balloon" style="width:400px; left:54%; top:27%">Default namespace – applied for the entire XML document</div>
 
 <!-- section start -->
 <!-- attr: {id: 'xml-schemas-and-validation', class: 'slide-section', showInPresentation:true} -->
