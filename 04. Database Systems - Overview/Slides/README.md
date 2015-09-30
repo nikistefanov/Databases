@@ -124,7 +124,7 @@ Primary key <!-- .element; class="balloon fragment" style="top:30%; left:-5%" --
   <div class="balloon" style="left:60%; top:45%" >Primary key</div>
 </div>
 
-<!-- attr: { showInPresentation:true } -->
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
 <!-- # Relationships -->
 * The `foreign key` is an identifier of a record located in another table (usually its primary key)
 * By using relationships we avoid repeating data in the database 
