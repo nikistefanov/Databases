@@ -327,9 +327,22 @@ END;
 # Views – Example
 <img class="slide-image" src="imgs/views.png" style="top:14%" />
 
-<!-- attr: {hasScriptWrapper: true} -->
-# Views – Example
-<img class="slide-image" src="imgs/views2.png" style="top:11%" />
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Views – Example -->
+```sql
+CREATE VIEW V_BGCompanies AS
+  SELECT
+    Companies.Id AS Id,
+    Companies.Company AS Company
+  FROM Companies INNER JOIN
+    (Towns INNER JOIN Countries ON
+     Towns.CountryId = Countries.Id)
+    ON Companies.TownId = Towns.Id
+  WHERE
+    Countries.Country = "Bulgaria";
+```
+
+<img class="slide-image" src="imgs/views2.png" style="height:30%" />
 
 # Triggers
 *	`Triggers` are special stored procedures that are activate when some event occurs, for instance:
