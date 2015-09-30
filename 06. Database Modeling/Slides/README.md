@@ -308,4 +308,4 @@ photo and date.
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section'} -->
 # Questions
-## atabase Modeling
+## Database Modeling
