@@ -255,6 +255,7 @@
 	*	Ultra-fast, non-persistent
 *	`CSV`
 	*	Stores the data in CSV (text) files
+*	[More info](https://dev.mysql.com/doc/refman/5.1/en/storage-engines.html)
 
 <!-- attr: {hasScriptWrapper: true} -->
 # MySQL Services, Start, Stop
