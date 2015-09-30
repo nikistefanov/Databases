@@ -301,7 +301,7 @@
 
 <!-- attr: {hasScriptWrapper: true} -->
 # phpMyAdmin Tool
-*	pMyAdmin Tool
+*	phpMyAdmin Tool
 	*	Web-based open-source MySQL admin tool
 <img class="slide-image" src="imgs/php-my-admin.png" style="left:2%; bottom:5%;" />
 
