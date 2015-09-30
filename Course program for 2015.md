@@ -123,14 +123,14 @@
         <tr>
             <td>21</td>
             <td>Teamwork Defence</td>
-            <td>20 October 2015 (Wed)</td>
+            <td>20 October 2015 (Tue)</td>
             <td>10:00 - 20:00</td>
         </tr>
         <tr>
             <td>22</td>
             <td>Exam</td>
-            <td> October 2015 (Fri)</td>
-            <td>14:00 - 22:00</td>
+            <td>23 October 2015 (Fri)</td>
+            <td></td>
         </tr>
     </tbody>
 </table>

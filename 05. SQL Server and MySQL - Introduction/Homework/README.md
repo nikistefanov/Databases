@@ -1,4 +1,4 @@
-## 02. SQL Server and MySQL - Introduction
+## SQL Server and MySQL - Introduction
 ### _Homework_
 
 1.	Download and install SQL Server Express. Install also SQL Server Management Studio Express (this could take some effort but be persistent).
@@ -18,3 +18,4 @@
 1.	Modify the script and execute it to restore the database world as "`worldNew`".
 1.	Connect through the MySQL console client and list the first 20 tons from the database "`worldNew`".
 
+#### As a result of your homework provide screenshots

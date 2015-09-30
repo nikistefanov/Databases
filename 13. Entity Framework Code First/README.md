@@ -1,4 +1,4 @@
-## 09. Entity Framework Code First
+## 13. Entity Framework Code First
 ### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html)
 ### Table of Contents
 * Modeling Workflow - [go to slide](https://rawgit.com/TelerikAcademy/Databases/master/13.%20Entity%20Framework%20Code%20First/Slides/index.html#/modeling-workflow)
