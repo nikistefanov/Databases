@@ -441,7 +441,6 @@ END;
 <!-- attr: { hasScriptWrapper: true } -->
 # Relational vs. NoSQL Models
 <img class="slide-image" src="imgs/relational-model.png" style="top:13%; left:0%; height:80%" />
-<img class="slide-image" src="imgs/document-model.png" style="top:13%; right:0%; height:80%" />
 
 # NoSQL Database Systems
 *	[Redis](http://redis.io/)
