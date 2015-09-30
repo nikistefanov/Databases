@@ -134,12 +134,13 @@ Primary key <!-- .element; class="balloon fragment" style="top:30%; left:-5%" --
   * Many-to-many – e.g. student / course
   * One-to-one – e.g. example human / student
 
+<!-- attr: { hasScriptWrapper:true } -->
 # Relationships' Multiplicity
 * Relationship `one-to-many` (or many-to-one)
   * A single record in the first table has many corresponding records in the second table
   * Used very often
   
-<img class="slide-image" src="imgs/one-to-many-ralation.png" style="top: 40%" />
+<img class="slide-image" src="imgs/one-to-many-ralation.png" style="top:40%" />
 
 <!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
 <!-- # Relationships' Multiplicity -->
