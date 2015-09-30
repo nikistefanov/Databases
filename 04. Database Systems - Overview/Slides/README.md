@@ -381,7 +381,7 @@ END;
 *	Transactions guarantee the consistency and the integrity of the database
 	*	All changes in a transaction are temporary
 	*	Changes become final when `COMMIT` is successfully executed
-	*	At any time all changes done in the transaction can be cancelled by executing `OLLBACK`
+	*	At any time all changes done in the transaction can be cancelled by executing `ROLLBACK`
 *	All operations are executed as a single unit
 	*	Either all of them pass or none of them
 
@@ -391,15 +391,15 @@ END;
 ## Non-Relational Database Systems
 
 # Non-Relational Data Models
-*	Document model
+*	Document model (e.g. MongoDB, CouchDB)
 	*	Set of documents, e.g. JSON strings
-*	Key-value model
+*	Key-value model (e.g. Redis)
 	*	Set of key-value pairs
 *	Hierarchical key-value
 	*	Hierarchy of key-value pairs
-*	Wide-column model
+*	Wide-column model (e.g. Cassandra)
 	*	Key-value model with schema
-*	Object model
+*	Object model (e.g. Cache)
 	*	Set of OOP-style objects
 	
 # What is NoSQL Database?
