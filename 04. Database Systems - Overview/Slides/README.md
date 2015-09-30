@@ -121,16 +121,33 @@ Primary key <!-- .element; class="balloon fragment" style="top:30%; left:-5%" --
 
 <img class="slide-image" src="imgs/one-to-many-ralation.png" style="top: 40%" />
 
-<!-- attr: {hasScriptWrapper: true} -->
+<!-- attr: { showInPresentation:true } -->
+<!-- Relationships -->
+* The `foreign key` is an identifier of a record located in another table (usually its primary key)
+* By using relationships we avoid repeating data in the database 
+  * In the last example the name of the country is not repeated for each town (its number is used instead)
+* Relationships have multiplicity:
+  * One-to-many – e.g. country / towns
+  * Many-to-many – e.g. student / course
+  * One-to-one – e.g. example human / student
+
 # Relationships' Multiplicity
+* Relationship `one-to-many` (or many-to-one)
+  * A single record in the first table has many corresponding records in the second table
+  * Used very often
+  
+<img class="slide-image" src="imgs/one-to-many-ralation.png" style="top: 40%" />
+
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Relationships' Multiplicity -->
 *	Relationship `many-to-many`
 	*	Records in the first table have many correspon-ding records in the second one and vice versa
 	*	Implemented through additional table
 	
 <img class="slide-image" src="imgs/many-to-many-ralation.png" style="top: 45%" />
 
-<!-- attr: {hasScriptWrapper: true} -->
-# Relationships' Multiplicity
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Relationships' Multiplicity -->
 *	Relationship `one-to-one`
 	*	A single record in a table corresponds to a single record in the other table
 	*	Used to model `inheritance` between tables
