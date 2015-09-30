@@ -113,13 +113,16 @@ Primary key <!-- .element; class="balloon fragment" style="top:30%; left:-5%" --
 *	Two records (rows) are different if and only if their primary keys are different
 *	The primary key can be composed by several columns (`composite primary key`)
 
-<!-- attr: {hasScriptWrapper: true} -->
+<!-- attr: { hasScriptWrapper:true } -->
 # Relationships
-*	Relationship `one-to-many` (or many-to-one)
-	*	A single record in the first table has many corresponding records in the second table
-	*	Used very often
+*	Relationships between tables are based on interconnections: primary key / foreign key
 
-<img class="slide-image" src="imgs/one-to-many-ralation.png" style="top: 40%" />
+<img class="slide-image" src="imgs/one-to-many-ralation.png" style="top:30%" />
+<div class="fragmentz">
+  <div class="balloon" style="left:-7%; top:37%" >Primary key</div>
+  <div class="balloon" style="left:40%; top:37%" >Foreign key</div>
+  <div class="balloon" style="left:60%; top:45%" >Primary key</div>
+</div>
 
 <!-- attr: { showInPresentation:true } -->
 <!-- Relationships -->
