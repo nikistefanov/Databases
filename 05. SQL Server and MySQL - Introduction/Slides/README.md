@@ -255,6 +255,7 @@
 	*	Ultra-fast, non-persistent
 *	`CSV`
 	*	Stores the data in CSV (text) files
+*	[More info](https://dev.mysql.com/doc/refman/5.1/en/storage-engines.html)
 
 <!-- attr: {hasScriptWrapper: true} -->
 # MySQL Services, Start, Stop
@@ -300,7 +301,7 @@
 
 <!-- attr: {hasScriptWrapper: true} -->
 # phpMyAdmin Tool
-*	pMyAdmin Tool
+*	phpMyAdmin Tool
 	*	Web-based open-source MySQL admin tool
 <img class="slide-image" src="imgs/php-my-admin.png" style="left:2%; bottom:5%;" />
 
