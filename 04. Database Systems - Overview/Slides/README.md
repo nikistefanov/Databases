@@ -118,7 +118,7 @@ Primary key <!-- .element; class="balloon fragment" style="top:30%; left:-5%" --
 *	Relationships between tables are based on interconnections: primary key / foreign key
 
 <img class="slide-image" src="imgs/one-to-many-ralation.png" style="top:30%" />
-<div class="fragmentz">
+<div class="fragment">
   <div class="balloon" style="left:-7%; top:37%" >Primary key</div>
   <div class="balloon" style="left:40%; top:37%" >Foreign key</div>
   <div class="balloon" style="left:60%; top:45%" >Primary key</div>
