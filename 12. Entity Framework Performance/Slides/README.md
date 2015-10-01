@@ -13,9 +13,9 @@
 <!-- attr: { id:'table-of-contents', class:'table-of-contents' } -->
 # Table of Contents
 * [SQL Profilers](#what-is-sql-profiler)
-* [The N+1 Query Problem](#the-n+1-query-problem)
+* [The N+1 Query Problem](#the-n1-query-problem)
 * [Incorrect Use of ToList()](#incorrect-use-of-tolist)
-* [Incorrect use of SELECT *](#incorrect-use-of-select)
+* [Incorrect use of SELECT *](#incorrect-use-of-select-)
 * [Deleting objects faster with native SQL](#deleting-entities)
 
 <!-- section start -->
@@ -37,7 +37,7 @@
 ## [Demo]()
 
 <!-- section start -->
-<!-- attr: { id:'the-n+1+query-problem', class:'slide-section', showInPresentation:true } -->
+<!-- attr: { id:'the-n1-query-problem', class:'slide-section', showInPresentation:true } -->
 <!-- # The N+1 Query Problem
 ## What is the N+1 Query Problem and How to Avoid It? -->
 
@@ -126,7 +126,7 @@ List<Order_Detail> orderItemsFromTokyo =
 <!-- # Incorrect Use of ToList() -->
 ## [Demo]()
 
-<!-- attr: {  id:'incorrect-use-of-select', class:'slide-section table-of-contents', showInPresentation:true } -->
+<!-- attr: {  id:'incorrect-use-of-select-', class:'slide-section table-of-contents', showInPresentation:true } -->
 # Incorrect Use of `SELECT *`
 ## [Demo]()
 
@@ -161,6 +161,6 @@ northwindEntities.Database.ExecuteSqlCommand(
 
 <!-- section start -->
 <!-- attr: { id:'questions', class:'slide-section', showInPresentation:true } -->
-# Questions
-## Databases
+<!-- # Questions
+## Databases -->
 [link to the forum]()
