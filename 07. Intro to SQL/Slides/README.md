@@ -22,13 +22,12 @@
 	*	Selecting Data From Multiple Tables
 
 # Table of Contents
-*	
-	*	Selecting Data From Multiple Tables
-		*	Natural Joins
-		*	Join with `USING` Clause
-		*	Inner Joins with `ON` Clause
-		*	Left, Right and Full Outer Joins
-		*	Cross Joins
+*	Selecting Data From Multiple Tables
+	*	Natural Joins
+	*	Join with `USING` Clause
+	*	Inner Joins with `ON` Clause
+	*	Left, Right and Full Outer Joins
+	*	Cross Joins
 *	Inserting Data
 *	Updating Data
 *	Deleting Data
