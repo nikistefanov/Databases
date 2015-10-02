@@ -69,7 +69,7 @@
 	*	[wiki/SQL](en.wikipedia.org/wiki/SQL)
 *	SQL consists of:
 	*	Data Manipulation Language (`DML`)
-		*	`SELECT`, `NSERT`, `UPDATE`, `DELETE`
+		*	`SELECT`, `INSERT`, `UPDATE`, `DELETE`
 	*	Data Definition Language (`DDL`)
 		*	`CREATE`, `DROP`, `ALTER`
 		*	`GRANT`, `REVOKE`
