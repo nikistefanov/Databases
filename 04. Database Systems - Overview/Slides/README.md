@@ -58,7 +58,7 @@
 *	RDBMS systems are also known as:
 	*	Database management servers
 	*	Or just database servers
-*	Popular RDBMS servers:
+*	Popular RDBMS servers ([BG IT jobs stats 2015](https://github.com/NikolayIT/BgItJobsMarketShare/blob/master/Results/2015-09-30-Databases.md)):
 	*	Microsoft SQL Server
 	*	Oracle Database
 	*	MySQL
@@ -113,24 +113,45 @@ Primary key <!-- .element; class="balloon fragment" style="top:30%; left:-5%" --
 *	Two records (rows) are different if and only if their primary keys are different
 *	The primary key can be composed by several columns (`composite primary key`)
 
-<!-- attr: {hasScriptWrapper: true} -->
+<!-- attr: { hasScriptWrapper:true } -->
 # Relationships
-*	Relationship `one-to-many` (or many-to-one)
-	*	A single record in the first table has many corresponding records in the second table
-	*	Used very often
+*	Relationships between tables are based on interconnections: primary key / foreign key
 
-<img class="slide-image" src="imgs/one-to-many-ralation.png" style="top: 40%" />
+<img class="slide-image" src="imgs/one-to-many-ralation.png" style="top:30%" />
+<div class="fragment">
+  <div class="balloon" style="left:-7%; top:37%" >Primary key</div>
+  <div class="balloon" style="left:40%; top:37%" >Foreign key</div>
+  <div class="balloon" style="left:60%; top:45%" >Primary key</div>
+</div>
 
-<!-- attr: {hasScriptWrapper: true} -->
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
+<!-- # Relationships -->
+* The `foreign key` is an identifier of a record located in another table (usually its primary key)
+* By using relationships we avoid repeating data in the database 
+  * In the last example the name of the country is not repeated for each town (its number is used instead)
+* Relationships have multiplicity:
+  * One-to-many – e.g. country / towns
+  * Many-to-many – e.g. student / course
+  * One-to-one – e.g. example human / student
+
+<!-- attr: { hasScriptWrapper:true } -->
 # Relationships' Multiplicity
+* Relationship `one-to-many` (or many-to-one)
+  * A single record in the first table has many corresponding records in the second table
+  * Used very often
+  
+<img class="slide-image" src="imgs/one-to-many-ralation.png" style="top:40%" />
+
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Relationships' Multiplicity -->
 *	Relationship `many-to-many`
 	*	Records in the first table have many correspon-ding records in the second one and vice versa
 	*	Implemented through additional table
 	
 <img class="slide-image" src="imgs/many-to-many-ralation.png" style="top: 45%" />
 
-<!-- attr: {hasScriptWrapper: true} -->
-# Relationships' Multiplicity
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Relationships' Multiplicity -->
 *	Relationship `one-to-one`
 	*	A single record in a table corresponds to a single record in the other table
 	*	Used to model `inheritance` between tables
@@ -306,9 +327,22 @@ END;
 # Views – Example
 <img class="slide-image" src="imgs/views.png" style="top:14%" />
 
-<!-- attr: {hasScriptWrapper: true} -->
-# Views – Example
-<img class="slide-image" src="imgs/views2.png" style="top:11%" />
+<!-- attr: { hasScriptWrapper:true, showInPresentation:true } -->
+<!-- # Views – Example -->
+```sql
+CREATE VIEW V_BGCompanies AS
+  SELECT
+    Companies.Id AS Id,
+    Companies.Company AS Company
+  FROM Companies INNER JOIN
+    (Towns INNER JOIN Countries ON
+     Towns.CountryId = Countries.Id)
+    ON Companies.TownId = Towns.Id
+  WHERE
+    Countries.Country = "Bulgaria";
+```
+
+<img class="slide-image" src="imgs/views2.png" style="height:30%" />
 
 # Triggers
 *	`Triggers` are special stored procedures that are activate when some event occurs, for instance:
@@ -360,7 +394,7 @@ END;
 *	Transactions guarantee the consistency and the integrity of the database
 	*	All changes in a transaction are temporary
 	*	Changes become final when `COMMIT` is successfully executed
-	*	At any time all changes done in the transaction can be cancelled by executing `OLLBACK`
+	*	At any time all changes done in the transaction can be cancelled by executing `ROLLBACK`
 *	All operations are executed as a single unit
 	*	Either all of them pass or none of them
 
@@ -370,15 +404,15 @@ END;
 ## Non-Relational Database Systems
 
 # Non-Relational Data Models
-*	Document model
+*	Document model (e.g. MongoDB, CouchDB)
 	*	Set of documents, e.g. JSON strings
-*	Key-value model
+*	Key-value model (e.g. Redis)
 	*	Set of key-value pairs
 *	Hierarchical key-value
 	*	Hierarchy of key-value pairs
-*	Wide-column model
+*	Wide-column model (e.g. Cassandra)
 	*	Key-value model with schema
-*	Object model
+*	Object model (e.g. Cache)
 	*	Set of OOP-style objects
 	
 # What is NoSQL Database?
@@ -407,7 +441,6 @@ END;
 <!-- attr: { hasScriptWrapper: true } -->
 # Relational vs. NoSQL Models
 <img class="slide-image" src="imgs/relational-model.png" style="top:13%; left:0%; height:80%" />
-<img class="slide-image" src="imgs/document-model.png" style="top:13%; right:0%; height:80%" />
 
 # NoSQL Database Systems
 *	[Redis](http://redis.io/)

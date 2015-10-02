@@ -13,8 +13,8 @@
 <!-- attr: {id: 'table-of-contents', class:'table-of-contents'} -->
 # Table of Contents
 *   [Modeling Workflow](#modeling-workflow)
-*   [Code First Main Parts](#domain-classes-models)
-    *   [Domain Classes - Models](#domain-classes-models)
+*   [Code First Main Parts](#domain-classes---models)
+    *   [Domain Classes - Models](#domain-classes---models)
     *   [DbContext and DbSets](#dbcontext-class)
     *   [Database connection](#where-is-my-data)
 *   [Using Code First Migrations](#code-first-migrations)
@@ -60,7 +60,7 @@ Domain classes
 *   Can use Data Annotations (`Key`, `Required`, etc.)
 
 <!-- section start -->
-<!-- attr: {id: 'domain-classes-models', class: 'slide-section', showInPresentation:true} -->
+<!-- attr: {id: 'domain-classes---models', class: 'slide-section', showInPresentation:true} -->
 <!-- # Code First Main Parts
 ## Domain classes, DbContext and DbSets -->
 
@@ -359,9 +359,32 @@ protected override void OnModelCreating(
 <!-- attr: {id: 'linqpad', class: 'slide-section', showInPresentation:true} -->
 <!-- # LINQpad -->
 
+# LINQpad
+* Download from: http://www.linqpad.net/ 
+* Supports native C# 5.0
+* Translates it to SQL, XML, Objects
+* Understands LINQ
+* Free and paid version
+
+<!-- attr: { class:'slide-section table-of-contents',showInPresentation:true } -->
+<!-- # LINQpad -->
+## [Demo]()
+
 <!-- section start -->
 <!-- attr: {id: 'repository-pattern', class: 'slide-section', showInPresentation:true} -->
 <!-- # Repository Pattern -->
+
+# Repository Pattern
+* Gives abstraction over the data layer
+* Single place to make changes to your data access
+* Single place responsible for a set of tables
+* Easily replaceable by other implementations
+* Hides the details in accessing data
+* Can be implemented in various ways
+
+<!-- attr: { class:'slide-section table-of-contents',showInPresentation:true } -->
+<!-- # Repository Pattern -->
+## [Demo]()
 
 <!-- section start -->
 <!-- attr: {id: 'questions', class: 'slide-section'} -->
